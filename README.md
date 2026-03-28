@@ -1,6 +1,6 @@
 # Portfolio
 
-A clean portfolio website designed for HR and hiring teams to review projects quickly.
+A clean portfolio website for presenting projects, demos, and supporting materials.
 
 ## Links
 
