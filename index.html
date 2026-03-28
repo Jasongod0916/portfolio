@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Jason Portfolio</title>
+  <meta
+    name="description"
+    content="A clean portfolio website with a sidebar project navigation for HR review."
+  >
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&family=Fraunces:opsz,wght@9..144,600;9..144,700&display=swap"
+    rel="stylesheet"
+  >
+  <script>
+    document.documentElement.classList.add("js");
+  </script>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <div class="dashboard-shell">
+    <aside class="sidebar reveal">
+      <a class="brand" href="index.html">Jason Portfolio</a>
+      <p class="sidebar-intro">
+        A simple showcase designed for hiring teams to review projects quickly and clearly.
+      </p>
+
+      <div class="sidebar-group">
+        <p class="sidebar-label">Projects</p>
+        <nav class="project-nav">
+          <a class="project-link" href="project-ai-dementia-care-system.html">
+            <span class="project-link-title">AI Dementia Care System</span>
+            <span class="project-link-meta">Android AI App</span>
+          </a>
+          <a class="project-link" href="project-two.html">
+            <span class="project-link-title">Project Two</span>
+            <span class="project-link-meta">Title only</span>
+          </a>
+        </nav>
+      </div>
+
+      <div class="sidebar-footer">
+        <p class="sidebar-label">Links</p>
+        <a class="sidebar-action sidebar-action-primary" href="https://jasongod0916.github.io/portfolio/" target="_blank" rel="noreferrer">View Live Website</a>
+        <a class="sidebar-action" href="https://github.com/Jasongod0916/portfolio" target="_blank" rel="noreferrer">GitHub Repository</a>
+        <a class="sidebar-action" href="mailto:your-email@example.com">your-email@example.com</a>
+      </div>
+    </aside>
+
+    <main class="content-area">
+      <section class="content-card hero-card reveal">
+        <p class="eyebrow">Portfolio Home</p>
+        <h1>Selected projects, organized for fast review.</h1>
+        <p class="lead">
+          Use the sidebar to open a project. The navigation stays visible so reviewers can switch
+          between projects without losing context.
+        </p>
+      </section>
+
+      <section class="content-card overview-card reveal">
+        <p class="section-label">Overview</p>
+        <div class="overview-grid">
+          <article>
+            <span class="overview-value">02</span>
+            <span class="overview-text">Projects in sidebar navigation</span>
+          </article>
+          <article>
+            <span class="overview-value">01</span>
+            <span class="overview-text">Detailed project page ready now</span>
+          </article>
+          <article>
+            <span class="overview-value">HR</span>
+            <span class="overview-text">Simple layout for clean screening</span>
+          </article>
+        </div>
+      </section>
+    </main>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
