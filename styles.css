@@ -325,6 +325,10 @@ h3 {
   gap: 18px;
 }
 
+.photo-grid-single {
+  grid-template-columns: 1fr;
+}
+
 .certificate-image {
   width: 100%;
   min-height: 284px;
