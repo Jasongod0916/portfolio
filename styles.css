@@ -102,9 +102,9 @@ h3 {
 .brand {
   display: inline-block;
   margin-bottom: 14px;
-  font-family: "Fraunces", Georgia, serif;
-  font-size: 1.6rem;
-  font-weight: 700;
+  font-size: 1.45rem;
+  font-weight: 800;
+  letter-spacing: -0.02em;
 }
 
 .sidebar-intro {
@@ -217,9 +217,10 @@ h3 {
 .hero-card h1,
 .project-hero h1 {
   max-width: 14ch;
-  font-family: "Fraunces", Georgia, serif;
-  font-size: clamp(2.8rem, 5vw, 5rem);
-  line-height: 0.98;
+  font-size: clamp(2.6rem, 4.8vw, 4.5rem);
+  font-weight: 800;
+  line-height: 1.02;
+  letter-spacing: -0.04em;
 }
 
 .eyebrow {
@@ -323,6 +324,46 @@ h3 {
   display: grid;
   grid-template-columns: repeat(2, minmax(0, 1fr));
   gap: 18px;
+}
+
+.project-summary {
+  display: grid;
+  gap: 12px;
+  padding: 24px;
+  border: 1px solid var(--line);
+  border-radius: var(--radius-lg);
+  background: var(--surface-soft);
+  transition:
+    transform 160ms ease,
+    border-color 160ms ease,
+    background-color 160ms ease;
+}
+
+.project-summary:hover,
+.project-summary:focus-visible {
+  transform: translateY(-2px);
+  border-color: rgba(216, 106, 49, 0.3);
+  background: rgba(255, 255, 255, 0.72);
+}
+
+.project-summary h2 {
+  font-size: 1.45rem;
+  font-weight: 800;
+  line-height: 1.15;
+  letter-spacing: -0.03em;
+}
+
+.project-summary p {
+  color: var(--muted);
+  line-height: 1.7;
+}
+
+.project-summary-tag {
+  font-size: 0.8rem;
+  font-weight: 800;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: var(--accent-deep);
 }
 
 .photo-grid-single {
