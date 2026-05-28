@@ -1,10 +1,11 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="zh-Hant">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>AI Dementia Care System | Jason Portfolio</title>
   <meta
+    id="page-description"
     name="description"
     content="AI Dementia Care System project page with sidebar navigation, demo video, and project materials."
   >
@@ -19,60 +20,72 @@
   </script>
   <link rel="stylesheet" href="styles.css">
 </head>
-<body>
+<body data-page="project1">
+  <div class="language-switcher reveal">
+    <label class="language-switcher-label" for="language-select">Language</label>
+    <select id="language-select" class="language-select" aria-label="Language selector">
+      <option value="zh-Hant">中文</option>
+      <option value="en">English</option>
+    </select>
+  </div>
+
   <div class="dashboard-shell">
     <aside class="sidebar reveal">
       <a class="brand" href="index.html">Jason Portfolio</a>
-      <p class="sidebar-intro">
-        Welcome to my portfolio. Here you'll find selected projects, demos, and supporting materials in one place.
+      <p class="sidebar-intro" data-i18n="sidebarIntro">
+        歡迎來到我的作品集，這裡整理了我精選的專案、展示影片與補充資料。
       </p>
 
       <div class="sidebar-group">
-        <p class="sidebar-label">Projects</p>
+        <p class="sidebar-label" data-i18n="projectsLabel">專案</p>
         <nav class="project-nav">
           <a class="project-link active" href="project-ai-dementia-care-system.html">
             <span class="project-link-title">AI Dementia Care System</span>
-            <span class="project-link-meta">Android AI App</span>
+            <span class="project-link-meta" data-i18n="project1Meta">Android AI App</span>
           </a>
           <a class="project-link" href="project-two.html">
             <span class="project-link-title">AI Drone-assisted Agriculture Job Marketplace</span>
-            <span class="project-link-meta">Drone + Agri Platform</span>
+            <span class="project-link-meta" data-i18n="project2Meta">Drone + Agri Platform</span>
           </a>
         </nav>
       </div>
 
       <div class="sidebar-group">
-        <p class="sidebar-label">Works</p>
+        <p class="sidebar-label" data-i18n="worksLabel">其他作品</p>
         <nav class="project-nav">
-          <a class="work-mini-link" href="index.html#work-wanyongconverter">
-            <span class="project-link-title">WanyongConverter</span>
-            <span class="project-link-meta">Desktop software</span>
-          </a>
           <a class="work-mini-link" href="index.html#work-github-analysis">
             <span class="project-link-title">Gitub Analysis for You</span>
-            <span class="project-link-meta">Website</span>
+            <span class="project-link-meta" data-i18n="work2MiniMeta">網站</span>
+          </a>
+          <a class="work-mini-link" href="index.html#work-wanyongconverter">
+            <span class="project-link-title">WanyongConverter</span>
+            <span class="project-link-meta" data-i18n="work1MiniMeta">桌面軟體</span>
           </a>
         </nav>
       </div>
 
       <div class="sidebar-footer">
-        <p class="sidebar-label">Links</p>
-        <a class="sidebar-action sidebar-action-primary" href="https://jasongod0916.github.io/portfolio/" target="_blank" rel="noreferrer">View Live Website</a>
-        <a class="sidebar-action" href="https://github.com/Jasongod0916/portfolio" target="_blank" rel="noreferrer">GitHub Repository</a>
+        <p class="sidebar-label" data-i18n="linksLabel">連結</p>
+        <a class="sidebar-action sidebar-action-primary" href="https://jasongod0916.github.io/portfolio/" target="_blank" rel="noreferrer" data-i18n="viewWebsite">瀏覽網站</a>
+        <a class="sidebar-action" href="https://github.com/Jasongod0916/portfolio" target="_blank" rel="noreferrer" data-i18n="githubRepo">GitHub 專案</a>
         <a class="sidebar-action" href="mailto:jasonchiu0916@gmail.com">jasonchiu0916@gmail.com</a>
       </div>
     </aside>
 
     <main class="content-area">
       <section class="content-card project-hero reveal">
-        <p class="eyebrow">Project 01</p>
-        <h1>AI Dementia Care System</h1>
-        <span class="project-tag">Android AI App</span>
-        <p class="project-subtitle">Real-time monitoring and personalized companionship</p>
+        <div class="project-hero-copy">
+          <p class="eyebrow" data-i18n="project01Tag">專案 01</p>
+          <h1>AI Dementia Care System</h1>
+          <span class="project-tag" data-i18n="project1Meta">Android AI App</span>
+          <p class="project-subtitle" data-i18n="project1Subtitle">
+            一套結合 AI、RAG 語義檢索、ChatGPT 與行為辨識技術的個人化失智陪伴系統，致力於解決高齡化社會下失智照護人力不足與陪伴缺口問題。系統透過「主動式陪伴」、「個人化互動」與「鼓勵式照顧」三大核心理念，陪伴患者進行日常聊天、飲食、運動與回憶互動，並透過 AI 分析使用者的聊天歷史、行為模式與生活習慣，提供更貼近個人的照護體驗。
+          </p>
+        </div>
       </section>
 
       <section class="content-card video-card reveal">
-        <p class="video-label">Demo Video</p>
+        <p class="video-label" data-i18n="demoVideo">展示影片</p>
         <div class="video-frame">
           <video
             class="project-video"
@@ -86,40 +99,41 @@
 
       <section class="details-grid">
         <article class="detail-section reveal">
-          <p class="detail-title">Functions</p>
+          <p class="detail-title" data-i18n="functionsLabel">功能</p>
           <ul class="project-points">
-            <li>Wandering detection and safety zone monitoring</li>
-            <li>Memory-based nostalgia chat with RAG retrieval</li>
-            <li>Meal and exercise behavior monitoring</li>
-            <li>Health consultation and information support</li>
-            <li>Daily activity tracking and caregiver dashboard</li>
+            <li data-i18n="project1Function1">懷舊聊天與 RAG 知識庫</li>
+            <li data-i18n="project1Function2">MLKit 姿勢辨識運動偵測</li>
+            <li data-i18n="project1Function3">YOLOv11 飲食辨識</li>
+            <li data-i18n="project1Function4">安全區防走失系統</li>
+            <li data-i18n="project1Function5">每日量表互動檢測</li>
+            <li data-i18n="project1Function6">衛教諮詢與照護建議</li>
           </ul>
         </article>
 
         <article class="detail-section reveal">
-          <p class="detail-title">Technology</p>
+          <p class="detail-title" data-i18n="technologyLabel">技術</p>
           <ul class="project-points">
-            <li>YOLOv11 (behavior detection)</li>
-            <li>Google ML Kit (pose detection)</li>
+            <li data-i18n="project1Tech1">YOLOv11（行為偵測）</li>
+            <li data-i18n="project1Tech2">Google ML Kit（姿態偵測）</li>
             <li>RAG (nostalgia content retrieval and response generation)</li>
-            <li>ChatGPT API (conversational interaction)</li>
-            <li>Android (mobile application)</li>
-            <li>MySQL (user and care data management)</li>
+            <li data-i18n="project1Tech4">ChatGPT API（對話互動）</li>
+            <li data-i18n="project1Tech5">Android（行動應用程式）</li>
+            <li data-i18n="project1Tech6">MySQL（使用者與照護資料管理）</li>
           </ul>
         </article>
 
         <article class="detail-section reveal">
-          <p class="detail-title">Achievements</p>
+          <p class="detail-title" data-i18n="achievementsLabel">成果</p>
           <ul class="project-points">
-            <li>1st Place - National AI Innovation Competition</li>
-            <li>AI-powered personalized dementia care system</li>
-            <li>Real-time monitoring with conversational companionship</li>
+            <li data-i18n="project1Achievement1">全國 AI 創新競賽第一名</li>
+            <li data-i18n="project1Achievement2">AI 驅動的個人化失智照護系統</li>
+            <li data-i18n="project1Achievement3">結合即時監控與對話式陪伴功能</li>
           </ul>
         </article>
       </section>
 
       <section class="content-card photo-card reveal">
-        <p class="video-label">Project Photos</p>
+        <p class="video-label" data-i18n="projectPhotos">專案照片</p>
         <div class="photo-grid">
           <div class="photo-frame">
             <img

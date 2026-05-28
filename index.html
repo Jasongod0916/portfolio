@@ -1,10 +1,11 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="zh-Hant">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Jason Portfolio</title>
   <meta
+    id="page-description"
     name="description"
     content="Jason Portfolio with selected projects, demos, and supporting materials."
   >
@@ -19,110 +20,86 @@
   </script>
   <link rel="stylesheet" href="styles.css">
 </head>
-<body>
+<body data-page="home">
+  <div class="language-switcher reveal">
+    <label class="language-switcher-label" for="language-select">Language</label>
+    <select id="language-select" class="language-select" aria-label="Language selector">
+      <option value="zh-Hant">中文</option>
+      <option value="en">English</option>
+    </select>
+  </div>
+
   <div class="dashboard-shell">
     <aside class="sidebar reveal">
       <a class="brand" href="index.html">Jason Portfolio</a>
-      <p class="sidebar-intro">
-        Welcome to my portfolio. Here you'll find selected projects, demos, and supporting materials in one place.
+      <p class="sidebar-intro" data-i18n="sidebarIntro">
+        歡迎來到我的作品集，這裡整理了我精選的專案、展示影片與補充資料。
       </p>
 
       <div class="sidebar-group">
-        <p class="sidebar-label">Projects</p>
+        <p class="sidebar-label" data-i18n="projectsLabel">專案</p>
         <nav class="project-nav">
           <a class="project-link" href="project-ai-dementia-care-system.html">
             <span class="project-link-title">AI Dementia Care System</span>
-            <span class="project-link-meta">Android AI App</span>
+            <span class="project-link-meta" data-i18n="project1Meta">Android AI App</span>
           </a>
           <a class="project-link" href="project-two.html">
             <span class="project-link-title">AI Drone-assisted Agriculture Job Marketplace</span>
-            <span class="project-link-meta">Drone + Agri Platform</span>
+            <span class="project-link-meta" data-i18n="project2Meta">Drone + Agri Platform</span>
           </a>
         </nav>
       </div>
 
       <div class="sidebar-group">
-        <p class="sidebar-label">Works</p>
+        <p class="sidebar-label" data-i18n="worksLabel">其他作品</p>
         <nav class="project-nav">
-          <a class="work-mini-link" href="#work-wanyongconverter">
-            <span class="project-link-title">WanyongConverter</span>
-            <span class="project-link-meta">Desktop software</span>
-          </a>
           <a class="work-mini-link" href="#work-github-analysis">
             <span class="project-link-title">Gitub Analysis for You</span>
-            <span class="project-link-meta">Website</span>
+            <span class="project-link-meta" data-i18n="work2MiniMeta">網站</span>
+          </a>
+          <a class="work-mini-link" href="#work-wanyongconverter">
+            <span class="project-link-title">WanyongConverter</span>
+            <span class="project-link-meta" data-i18n="work1MiniMeta">桌面軟體</span>
           </a>
         </nav>
       </div>
 
       <div class="sidebar-footer">
-        <p class="sidebar-label">Links</p>
-        <a class="sidebar-action sidebar-action-primary" href="https://jasongod0916.github.io/portfolio/" target="_blank" rel="noreferrer">View Live Website</a>
-        <a class="sidebar-action" href="https://github.com/Jasongod0916/portfolio" target="_blank" rel="noreferrer">GitHub Repository</a>
+        <p class="sidebar-label" data-i18n="linksLabel">連結</p>
+        <a class="sidebar-action sidebar-action-primary" href="https://jasongod0916.github.io/portfolio/" target="_blank" rel="noreferrer" data-i18n="viewWebsite">瀏覽網站</a>
+        <a class="sidebar-action" href="https://github.com/Jasongod0916/portfolio" target="_blank" rel="noreferrer" data-i18n="githubRepo">GitHub 專案</a>
         <a class="sidebar-action" href="mailto:jasonchiu0916@gmail.com">jasonchiu0916@gmail.com</a>
       </div>
     </aside>
 
     <main class="content-area">
       <section class="content-card hero-card reveal">
-        <p class="eyebrow">Welcome</p>
-        <h1>Selected projects in AI, product building, and real-world problem solving.</h1>
-        <p class="lead">
-          Explore project demos, key features, technologies, competition results, and supporting materials from the sidebar or the project cards below.
+        <p class="eyebrow" data-i18n="homeEyebrow">首頁</p>
+        <h1 data-i18n="homeHeroTitle">專案與作品，始終來自於生活</h1>
+        <p class="lead" data-i18n="homeHeroLead">
+          你可以從側邊欄查看專案、其他作品與詳細資訊
         </p>
       </section>
 
       <section class="content-card reveal">
-        <p class="section-label">Featured Projects</p>
+        <p class="section-label" data-i18n="featuredProjectsLabel">精選專案</p>
         <div class="photo-grid">
           <a class="project-summary" href="project-ai-dementia-care-system.html">
-            <span class="project-summary-tag">Project 01</span>
+            <span class="project-summary-tag" data-i18n="project01Tag">專案 01</span>
             <h2>AI Dementia Care System</h2>
-            <p>Real-time monitoring and personalized companionship for dementia care.</p>
+            <p data-i18n="project1Summary">結合即時監控與個人化陪伴的失智照護 AI 系統。</p>
           </a>
           <a class="project-summary" href="project-two.html">
-            <span class="project-summary-tag">Project 02</span>
+            <span class="project-summary-tag" data-i18n="project02Tag">專案 02</span>
             <h2>AI Drone-assisted Agriculture Job Marketplace</h2>
-            <p>Drone-enabled agricultural task support and job coordination platform.</p>
+            <p data-i18n="project2Summary">結合無人機巡檢、農務媒合與任務協調的農業平台。</p>
           </a>
         </div>
       </section>
 
       <section class="content-card reveal" id="works">
-        <p class="section-label">Works</p>
+        <p class="section-label" data-i18n="worksSectionLabel">其他作品</p>
         <div class="works-grid">
-          <article class="work-card" id="work-wanyongconverter">
-            <img
-              class="work-card-image"
-              src="assets/works/work1.png"
-              alt="WanyongConverter application screenshot"
-              loading="lazy"
-            >
-            <span class="project-summary-tag">Windows Utility</span>
-            <h2>WanyongConverter</h2>
-            <p>
-              A portable Windows file conversion tool that brings image, document, and media
-              conversion into one interface, with support for batch workflows and portable use.
-            </p>
-            <div class="work-meta">
-              <span>
-                <strong>Type</strong>
-                Desktop Software
-              </span>
-              <span>
-                <strong>Platform</strong>
-                Windows
-              </span>
-              <span class="work-meta-wide">
-                <strong>Tech</strong>
-                Python, ffmpeg, pandoc, pdf2docx
-              </span>
-            </div>
-            <div class="work-actions">
-              <a class="work-action" href="https://github.com/Jasongod0916/WanyongConverter" target="_blank" rel="noreferrer">GitHub</a>
-              <a class="work-action" href="https://github.com/Jasongod0916/WanyongConverter/releases" target="_blank" rel="noreferrer">Releases</a>
-            </div>
-          </article>
           <article class="work-card" id="work-github-analysis">
             <img
               class="work-card-image"
@@ -130,29 +107,59 @@
               alt="Gitub Analysis for You website screenshot"
               loading="lazy"
             >
-            <span class="project-summary-tag">Website</span>
+            <span class="project-summary-tag" data-i18n="work2Tag">網站</span>
             <h2>Gitub Analysis for You</h2>
-            <p>
-              A web platform for searching, filtering, and analyzing GitHub projects with card
-              and list views, quick inspection, and dark mode support.
+            <p data-i18n="work2Description">
+              一個協助使用者搜尋、篩選與分析 GitHub 專案的 Web 平台，提供卡片、列表、快速檢視與深色模式切換。
             </p>
             <div class="work-meta">
               <span>
-                <strong>Type</strong>
-                Website
+                <strong data-i18n="typeLabel">類型</strong>
+                <span data-i18n="work2Type">網站</span>
               </span>
               <span>
-                <strong>Platform</strong>
-                Web
+                <strong data-i18n="platformLabel">平台</strong>
+                <span data-i18n="work2Platform">Web</span>
               </span>
               <span class="work-meta-wide">
-                <strong>Tech</strong>
-                HTML, CSS, JavaScript
+                <strong data-i18n="techLabel">技術</strong>
+                <span>HTML, CSS, JavaScript</span>
               </span>
             </div>
             <div class="work-actions">
               <a class="work-action" href="https://github.com/Jasongod0916/Gitub_Analysis_for_You" target="_blank" rel="noreferrer">GitHub</a>
-              <a class="work-action" href="https://gitub-analysis-for-you.onrender.com/" target="_blank" rel="noreferrer">Live Site</a>
+              <a class="work-action" href="https://gitub-analysis-for-you.onrender.com/" target="_blank" rel="noreferrer" data-i18n="liveSite">Live Site</a>
+            </div>
+          </article>
+          <article class="work-card" id="work-wanyongconverter">
+            <img
+              class="work-card-image"
+              src="assets/works/work1.png"
+              alt="WanyongConverter application screenshot"
+              loading="lazy"
+            >
+            <span class="project-summary-tag" data-i18n="work1Tag">Windows 工具</span>
+            <h2>WanyongConverter</h2>
+            <p data-i18n="work1Description">
+              一套可攜式 Windows 轉檔工具，整合圖片、文件與媒體格式轉換，支援批次處理與免安裝使用情境。
+            </p>
+            <div class="work-meta">
+              <span>
+                <strong data-i18n="typeLabel">類型</strong>
+                <span data-i18n="work1Type">桌面軟體</span>
+              </span>
+              <span>
+                <strong data-i18n="platformLabel">平台</strong>
+                <span data-i18n="work1Platform">Windows</span>
+              </span>
+              <span class="work-meta-wide">
+                <strong data-i18n="techLabel">技術</strong>
+                <span>Python, ffmpeg, pandoc, pdf2docx</span>
+              </span>
+            </div>
+            <div class="work-actions">
+              <a class="work-action" href="https://github.com/Jasongod0916/WanyongConverter" target="_blank" rel="noreferrer">GitHub</a>
+              <a class="work-action" href="https://github.com/Jasongod0916/WanyongConverter/releases" target="_blank" rel="noreferrer" data-i18n="releases">Releases</a>
             </div>
           </article>
         </div>
