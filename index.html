@@ -1,172 +1,379 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="zh-Hant">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Jason Portfolio</title>
-  <meta
-    id="page-description"
-    name="description"
-    content="Jason Portfolio with selected projects, demos, and supporting materials."
-  >
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link
-    href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&display=swap"
-    rel="stylesheet"
-  >
-  <script>
-    document.documentElement.classList.add("js");
-  </script>
-  <link rel="stylesheet" href="styles.css">
-</head>
-<body data-page="home">
-  <div class="language-switcher reveal">
-    <label class="language-switcher-label" for="language-select">Language</label>
-    <select id="language-select" class="language-select" aria-label="Language selector">
-      <option value="zh-Hant">中文</option>
-      <option value="en">English</option>
-    </select>
-  </div>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Jason Portfolio</title>
+    <meta
+      id="page-description"
+      name="description"
+      content="Jason Portfolio，整理代表專案、作品與聯絡方式。"
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&display=swap"
+      rel="stylesheet"
+    />
+    <script>
+      document.documentElement.classList.add("js");
+    </script>
+    <link rel="stylesheet" href="styles.css?v=3" />
+  </head>
+  <body data-page="home">
+    <header class="site-header">
+      <div class="site-header-inner">
+        <a class="site-brand" href="index.html">Jason Portfolio</a>
 
-  <div class="dashboard-shell">
-    <aside class="sidebar reveal">
-      <a class="brand" href="index.html">Jason Portfolio</a>
-      <p class="sidebar-intro" data-i18n="sidebarIntro">
-        歡迎來到我的作品集，這裡整理了我精選的專案、展示影片與補充資料。
-      </p>
-
-      <div class="sidebar-group">
-        <p class="sidebar-label" data-i18n="projectsLabel">專案</p>
-        <nav class="project-nav">
-          <a class="project-link" href="project-ai-dementia-care-system.html">
-            <span class="project-link-title">AI Dementia Care System</span>
-            <span class="project-link-meta" data-i18n="project1Meta">Android AI App</span>
-          </a>
-          <a class="project-link" href="project-two.html">
-            <span class="project-link-title">AI Drone-assisted Agriculture Job Marketplace</span>
-            <span class="project-link-meta" data-i18n="project2Meta">Drone + Agri Platform</span>
-          </a>
+        <nav class="top-nav" aria-label="Primary">
+          <a href="#home" data-i18n="navHome">首頁</a>
+          <a href="#projects" data-i18n="navProjects">Projects</a>
+          <a href="#works" data-i18n="navWorks">Works</a>
+          <a href="#contact" data-i18n="navContact">Contact</a>
         </nav>
-      </div>
 
-      <div class="sidebar-group">
-        <p class="sidebar-label" data-i18n="worksLabel">其他作品</p>
-        <nav class="project-nav">
-          <a class="work-mini-link" href="#work-github-analysis">
-            <span class="project-link-title">Gitub Analysis for You</span>
-            <span class="project-link-meta" data-i18n="work2MiniMeta">網站</span>
-          </a>
-          <a class="work-mini-link" href="#work-wanyongconverter">
-            <span class="project-link-title">WanyongConverter</span>
-            <span class="project-link-meta" data-i18n="work1MiniMeta">桌面軟體</span>
-          </a>
-        </nav>
+        <div class="language-switcher">
+          <label class="language-switcher-label" for="language-select"
+            >Language</label
+          >
+          <select
+            id="language-select"
+            class="language-select"
+            aria-label="Language selector"
+          >
+            <option value="zh-Hant">中文</option>
+            <option value="en">English</option>
+          </select>
+        </div>
       </div>
+    </header>
 
-      <div class="sidebar-footer">
-        <p class="sidebar-label" data-i18n="linksLabel">連結</p>
-        <a class="sidebar-action sidebar-action-primary" href="https://jasongod0916.github.io/portfolio/" target="_blank" rel="noreferrer" data-i18n="viewWebsite">瀏覽網站</a>
-        <a class="sidebar-action" href="https://github.com/Jasongod0916/portfolio" target="_blank" rel="noreferrer" data-i18n="githubRepo">GitHub 專案</a>
-        <a class="sidebar-action" href="mailto:jasonchiu0916@gmail.com">jasonchiu0916@gmail.com</a>
-      </div>
-    </aside>
+    <main class="site-main">
+      <section class="hero-section reveal" id="home">
+        <div class="hero-copy">
+          <h1 class="hero-title">
+            <span class="hero-title-line" data-i18n="homeHeroTitleLine1"
+              >專案與作品，</span
+            >
+            <span class="hero-title-line" data-i18n="homeHeroTitleLine2"
+              >始終來自於生活。</span
+            >
+          </h1>
+          <p class="hero-lead" data-i18n="homeHeroLead">
+            這裡整理我做過的專題、課程作品與實作成果，聚焦在用
+            AI、產品設計與系統開發回應真實問題。
+          </p>
+          <div class="hero-actions">
+            <a
+              class="button button-primary"
+              href="project-ai-dementia-care-system.html"
+              data-i18n="homePrimaryCta"
+              >查看代表專案</a
+            >
+            <a
+              class="button button-secondary"
+              href="#projects"
+              data-i18n="homeSecondaryCta"
+              >瀏覽所有專案</a
+            >
+          </div>
+        </div>
 
-    <main class="content-area">
-      <section class="content-card hero-card reveal">
-        <p class="eyebrow" data-i18n="homeEyebrow">首頁</p>
-        <h1 data-i18n="homeHeroTitle">專案與作品，始終來自於生活</h1>
-        <p class="lead" data-i18n="homeHeroLead">
-          你可以從側邊欄查看專案、其他作品與詳細資訊
-        </p>
+        <a
+          class="spotlight-card reveal"
+          href="project-ai-dementia-care-system.html"
+        >
+          <h2 data-i18n="project1Title">AI失智照護系統</h2>
+          <p class="spotlight-meta" data-i18n="project1Meta">Android AI App</p>
+          <p class="spotlight-description" data-i18n="project1Summary">
+            結合即時監控與個人化陪伴的失智照護 AI 系統。
+          </p>
+          <ul class="spotlight-points">
+            <li data-i18n="homeProject1Point1">即時監控與失智陪伴整合</li>
+            <li data-i18n="homeProject1Point2">RAG 與 ChatGPT 驅動互動體驗</li>
+            <li data-i18n="homeProject1Point3">全國 AI 創新競賽第一名</li>
+          </ul>
+        </a>
       </section>
 
-      <section class="content-card reveal">
-        <p class="section-label" data-i18n="featuredProjectsLabel">精選專案</p>
-        <div class="photo-grid">
-          <a class="project-summary" href="project-ai-dementia-care-system.html">
-            <span class="project-summary-tag" data-i18n="project01Tag">專案 01</span>
-            <h2>AI Dementia Care System</h2>
-            <p data-i18n="project1Summary">結合即時監控與個人化陪伴的失智照護 AI 系統。</p>
+      <section class="section-block reveal" id="projects">
+        <div class="section-heading">
+          <p class="section-kicker" data-i18n="projectsEyebrow">Projects</p>
+          <h2 data-i18n="projectsTitle">專案</h2>
+          <p data-i18n="projectsLead">
+            兩個專案都以真實情境為出發點，從需求、功能到成果都可以快速看到核心價值。
+          </p>
+        </div>
+
+        <div class="project-grid">
+          <a
+            class="project-card reveal"
+            href="project-ai-dementia-care-system.html"
+          >
+            <span class="card-tag" data-i18n="project01Tag">專案 01</span>
+            <h3 data-i18n="project1Title">AI失智照護系統</h3>
+            <p class="card-meta" data-i18n="project1Meta">Android AI App</p>
+            <p class="card-description" data-i18n="project1Summary">
+              結合即時監控與個人化陪伴的失智照護 AI 系統。
+            </p>
           </a>
-          <a class="project-summary" href="project-two.html">
-            <span class="project-summary-tag" data-i18n="project02Tag">專案 02</span>
-            <h2>AI Drone-assisted Agriculture Job Marketplace</h2>
-            <p data-i18n="project2Summary">結合無人機巡檢、農務媒合與任務協調的農業平台。</p>
+
+          <a class="project-card reveal" href="project-two.html">
+            <span class="card-tag" data-i18n="project02Tag">專案 02</span>
+            <h3 data-i18n="project2Title">AI 無人機農務媒合平台</h3>
+            <p class="card-meta" data-i18n="project2Meta">
+              Drone + Agri Platform
+            </p>
+            <p class="card-description" data-i18n="project2Summary">
+              結合無人機巡檢、農務媒合與任務協調的農業平台。
+            </p>
           </a>
         </div>
       </section>
 
-      <section class="content-card reveal" id="works">
-        <p class="section-label" data-i18n="worksSectionLabel">其他作品</p>
-        <div class="works-grid">
-          <article class="work-card" id="work-github-analysis">
-            <img
-              class="work-card-image"
-              src="assets/works/work2.png"
-              alt="Gitub Analysis for You website screenshot"
-              loading="lazy"
+      <section class="section-block reveal" id="works">
+        <div class="section-heading">
+          <p class="section-kicker" data-i18n="worksEyebrow">Works</p>
+          <h2>課程作品</h2>
+        </div>
+
+        <div class="work-group">
+          <div class="work-grid">
+            <article class="work-accordion reveal" id="work-github-analysis">
+              <button
+                class="work-toggle"
+                type="button"
+                aria-expanded="false"
+                aria-controls="work-panel-github-analysis"
+              >
+                <span class="work-toggle-tag" data-i18n="work2Tag"
+                  >Website</span
+                >
+                <span class="work-toggle-title"
+                  >SEO 實作：GitHub 專案分析平台</span
+                >
+              </button>
+              <div class="work-panel" id="work-panel-github-analysis" hidden>
+                <div class="work-card">
+                  <div
+                    class="work-card-media work-gallery"
+                    data-gallery-id="work2"
+                  >
+                    <div class="gallery-track">
+                      <img
+                        class="work-card-image work-slide is-active"
+                        src="assets/works/work2/1.png"
+                        alt="GitHub SEO 專案分析平台 截圖 1"
+                        loading="lazy"
+                      />
+                      <img
+                        class="work-card-image work-slide"
+                        src="assets/works/work2/2.png"
+                        alt="GitHub SEO 專案分析平台 截圖 2"
+                        loading="lazy"
+                      />
+                    </div>
+                    <div class="gallery-bottom-controls">
+                      <button
+                        class="gallery-control gallery-prev"
+                        type="button"
+                        aria-label="Previous slide"
+                      >
+                        ‹
+                      </button>
+                      <div
+                        class="gallery-dots"
+                        aria-label="Slide navigation"
+                      ></div>
+                      <button
+                        class="gallery-control gallery-next"
+                        type="button"
+                        aria-label="Next slide"
+                      >
+                        ›
+                      </button>
+                    </div>
+                  </div>
+                  <div class="work-card-body">
+                    <span class="card-tag" data-i18n="work2Tag">Website</span>
+                    <h3>SEO 實作：GitHub 專案分析平台</h3>
+                    <p class="card-description" data-i18n="work2Description">
+                      一個協助使用者搜尋、篩選與分析 GitHub 專案的 Web
+                      平台，提供卡片、列表與深色模式切換。
+                    </p>
+                    <p class="work-role" data-i18n="work2Role">
+                      我負責整體介面設計、前端互動與 GitHub 專案探索流程整理。
+                    </p>
+                    <dl class="meta-list">
+                      <div>
+                        <dt data-i18n="typeLabel">類型</dt>
+                        <dd data-i18n="work2Type">網站</dd>
+                      </div>
+                      <div>
+                        <dt data-i18n="platformLabel">平台</dt>
+                        <dd data-i18n="work2Platform">Web</dd>
+                      </div>
+                      <div class="meta-list-wide">
+                        <dt data-i18n="techLabel">技術</dt>
+                        <dd>HTML, CSS, JavaScript</dd>
+                      </div>
+                    </dl>
+                    <div class="inline-actions">
+                      <a
+                        class="text-link"
+                        href="https://gitub-analysis-for-you.onrender.com/"
+                        target="_blank"
+                        rel="noreferrer"
+                        data-i18n="liveSite"
+                        >Live Site</a
+                      >
+                      <a
+                        class="text-link"
+                        href="https://github.com/Jasongod0916/Gitub_Analysis_for_You"
+                        target="_blank"
+                        rel="noreferrer"
+                        >GitHub</a
+                      >
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </article>
+          </div>
+        </div>
+        <div class="section-heading">
+          <p> </p>
+          <h2>日常開發</h2>
+        </div>
+        <div class="work-group">
+          <div class="work-grid">
+            <article class="work-accordion reveal" id="work-wanyongconverter">
+              <button
+                class="work-toggle"
+                type="button"
+                aria-expanded="false"
+                aria-controls="work-panel-wanyongconverter"
+              >
+                <span class="work-toggle-tag" data-i18n="work1Tag"
+                  >Windows Utility</span
+                >
+                <span class="work-toggle-title">萬用轉檔王</span>
+              </button>
+              <div class="work-panel" id="work-panel-wanyongconverter" hidden>
+                <div class="work-card">
+                  <div
+                    class="work-card-media work-gallery"
+                    data-gallery-id="work1"
+                  >
+                    <div class="gallery-track">
+                      <img
+                        class="work-card-image work-slide is-active"
+                        src="assets/works/work1/work1.png"
+                        alt="WanyongConverter application screenshot"
+                        loading="lazy"
+                      />
+                      <!-- 如果之後要新增幻燈片圖片，直接在這裡新增一個 .work-slide 元素：
+                  <img class="work-card-image work-slide" src="assets/works/work1/2.png" alt="WanyongConverter screenshot 2" loading="lazy">
+                  -->
+                    </div>
+                    <div class="gallery-bottom-controls">
+                      <button
+                        class="gallery-control gallery-prev"
+                        type="button"
+                        aria-label="Previous slide"
+                      >
+                        ‹
+                      </button>
+                      <div
+                        class="gallery-dots"
+                        aria-label="Slide navigation"
+                      ></div>
+                      <button
+                        class="gallery-control gallery-next"
+                        type="button"
+                        aria-label="Next slide"
+                      >
+                        ›
+                      </button>
+                    </div>
+                  </div>
+                  <div class="work-card-body">
+                    <span class="card-tag" data-i18n="work1Tag"
+                      >Windows Utility</span
+                    >
+                    <h3>萬用轉檔王</h3>
+                    <p class="card-description" data-i18n="work1Description">
+                      一套可攜式 Windows
+                      轉檔工具，整合圖片、文件與媒體格式轉換，支援批次處理與免安裝使用情境。
+                    </p>
+                    <p class="work-role" data-i18n="work1Role">
+                      我負責工具整合、轉檔流程設計，以及可攜版桌面軟體封裝。
+                    </p>
+                    <dl class="meta-list">
+                      <div>
+                        <dt data-i18n="typeLabel">類型</dt>
+                        <dd data-i18n="work1Type">桌面軟體</dd>
+                      </div>
+                      <div>
+                        <dt data-i18n="platformLabel">平台</dt>
+                        <dd data-i18n="work1Platform">Windows</dd>
+                      </div>
+                      <div class="meta-list-wide">
+                        <dt data-i18n="techLabel">技術</dt>
+                        <dd>Python, ffmpeg, pandoc, pdf2docx</dd>
+                      </div>
+                    </dl>
+                    <div class="inline-actions">
+                      <a
+                        class="text-link"
+                        href="https://github.com/Jasongod0916/WanyongConverter"
+                        target="_blank"
+                        rel="noreferrer"
+                        >GitHub</a
+                      >
+                      <a
+                        class="text-link"
+                        href="https://github.com/Jasongod0916/WanyongConverter/releases"
+                        target="_blank"
+                        rel="noreferrer"
+                        data-i18n="releases"
+                        >Releases</a
+                      >
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <section class="section-block contact-section reveal" id="contact">
+        <div class="section-heading">
+          <p class="section-kicker" data-i18n="contactEyebrow">Contact</p>
+          <h2 data-i18n="contactTitle">聯絡與連結</h2>
+        </div>
+
+        <div class="contact-grid">
+          <a class="contact-card" href="mailto:jasonchiu0916@gmail.com">
+            <span class="contact-label" data-i18n="emailLabel">Email</span>
+            <strong>jasonchiu0916@gmail.com</strong>
+          </a>
+          <a
+            class="contact-card"
+            href="https://github.com/Jasongod0916/portfolio"
+            target="_blank"
+            rel="noreferrer"
+          >
+            <span class="contact-label">GitHub</span>
+            <strong data-i18n="githubPortfolioLabel"
+              >Portfolio Repository</strong
             >
-            <span class="project-summary-tag" data-i18n="work2Tag">網站</span>
-            <h2>Gitub Analysis for You</h2>
-            <p data-i18n="work2Description">
-              一個協助使用者搜尋、篩選與分析 GitHub 專案的 Web 平台，提供卡片、列表、快速檢視與深色模式切換。
-            </p>
-            <div class="work-meta">
-              <span>
-                <strong data-i18n="typeLabel">類型</strong>
-                <span data-i18n="work2Type">網站</span>
-              </span>
-              <span>
-                <strong data-i18n="platformLabel">平台</strong>
-                <span data-i18n="work2Platform">Web</span>
-              </span>
-              <span class="work-meta-wide">
-                <strong data-i18n="techLabel">技術</strong>
-                <span>HTML, CSS, JavaScript</span>
-              </span>
-            </div>
-            <div class="work-actions">
-              <a class="work-action" href="https://github.com/Jasongod0916/Gitub_Analysis_for_You" target="_blank" rel="noreferrer">GitHub</a>
-              <a class="work-action" href="https://gitub-analysis-for-you.onrender.com/" target="_blank" rel="noreferrer" data-i18n="liveSite">Live Site</a>
-            </div>
-          </article>
-          <article class="work-card" id="work-wanyongconverter">
-            <img
-              class="work-card-image"
-              src="assets/works/work1.png"
-              alt="WanyongConverter application screenshot"
-              loading="lazy"
-            >
-            <span class="project-summary-tag" data-i18n="work1Tag">Windows 工具</span>
-            <h2>WanyongConverter</h2>
-            <p data-i18n="work1Description">
-              一套可攜式 Windows 轉檔工具，整合圖片、文件與媒體格式轉換，支援批次處理與免安裝使用情境。
-            </p>
-            <div class="work-meta">
-              <span>
-                <strong data-i18n="typeLabel">類型</strong>
-                <span data-i18n="work1Type">桌面軟體</span>
-              </span>
-              <span>
-                <strong data-i18n="platformLabel">平台</strong>
-                <span data-i18n="work1Platform">Windows</span>
-              </span>
-              <span class="work-meta-wide">
-                <strong data-i18n="techLabel">技術</strong>
-                <span>Python, ffmpeg, pandoc, pdf2docx</span>
-              </span>
-            </div>
-            <div class="work-actions">
-              <a class="work-action" href="https://github.com/Jasongod0916/WanyongConverter" target="_blank" rel="noreferrer">GitHub</a>
-              <a class="work-action" href="https://github.com/Jasongod0916/WanyongConverter/releases" target="_blank" rel="noreferrer" data-i18n="releases">Releases</a>
-            </div>
-          </article>
+          </a>
         </div>
       </section>
     </main>
-  </div>
 
-  <script src="script.js"></script>
-</body>
+    <script src="script.js?v=3"></script>
+  </body>
 </html>
