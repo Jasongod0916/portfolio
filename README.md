@@ -10,3 +10,4 @@ A clean portfolio website for presenting projects, demos, and supporting materia
 ## Featured Project
 
 - AI Dementia Care System
+- AI Drone-assisted Agriculture Job Marketplace

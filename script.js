@@ -95,7 +95,7 @@ const translations = {
       siteLabel: "Website",
       livePortfolioLabel: "Live Portfolio",
       project1Subtitle:
-        "一套結合 AI、RAG 語義檢索、ChatGPT 與行為辨識技術的個人化失智陪伴系統，致力於解決高齡化社會下失智照護人力不足與陪伴缺口問題。系統透過「主動式陪伴」、「個人化互動」與「鼓勵式照顧」三大核心理念，陪伴患者進行日常聊天、飲食、運動與回憶互動，並透過 AI 分析使用者的聊天歷史、行為模式與生活習慣，提供更貼近個人的照護體驗。",
+        "針對失智照護人力不足與長者陪伴缺口，我負責從需求設計、AI 整合到 Android App 開發，打造一套具體可行的智慧陪伴系統。系統結合懷舊聊天、RAG 知識檢索、ChatGPT 互動，以及 YOLOv11 / ML Kit 的運動、飲食與安全監測，讓家屬與照護者同時獲得即時警示與個人化互動支援。",
       project2Subtitle:
         "一套結合無人機巡檢、YOLO 視覺辨識與 Web 平台協作的農業媒合系統，聚焦於解決農業缺工、巡田效率不足與任務協調不易的問題。系統讓農民能透過平台建立任務、安排田區與工作流程，並結合 DJI Tello 與即時影像回傳進行農地觀測，提升農務媒合與現場巡檢的效率。",
       projectHighlightLabel: "Project Focus",
@@ -106,12 +106,12 @@ const translations = {
       achievementsLabel: "成果",
       projectPhotosEyebrow: "Materials",
       projectPhotos: "競賽經歷",
-      project1Function1: "懷舊聊天與 RAG 知識庫",
-      project1Function2: "MLKit 姿勢辨識運動偵測",
-      project1Function3: "YOLOv11 飲食辨識",
-      project1Function4: "安全區防走失系統",
-      project1Function5: "每日量表互動檢測",
-      project1Function6: "衛教諮詢與照護建議",
+      project1Function1: "懷舊聊天與 RAG 知識庫，強化長者互動",
+      project1Function2: "ML Kit 姿勢偵測，辨識運動與日常活動",
+      project1Function3: "YOLOv11 飲食辨識，提供飲食安全回饋",
+      project1Function4: "安全區防走失系統，立即發送離開警示",
+      project1Function5: "每日量表互動，紀錄情緒與身體狀態",
+      project1Function6: "衛教諮詢與照護建議，支援家屬決策",
       project1Tech1: "YOLOv11（行為偵測）",
       project1Tech2: "Google ML Kit（姿態偵測）",
       project1Tech3:
@@ -120,8 +120,9 @@ const translations = {
       project1Tech5: "Android（行動應用程式）",
       project1Tech6: "MySQL（使用者與照護資料管理）",
       project1Achievement1: "全國 AI 創新競賽第一名",
-      project1Achievement2: "AI 驅動的個人化失智照護系統",
-      project1Achievement3: "結合即時監控與對話式陪伴功能",
+      project1Achievement2: "從需求到實作完成即時監控與陪伴的失智照護 MVP",
+      project1Achievement3:
+        "整合 AI 影像辨識與對話陪伴，提升長者日常安全與互動",
       project2Function1: "無人機輔助農地巡檢",
       project2Function2: "農業工作媒合平台",
       project2Function3: "任務排程與田區設定",
@@ -234,7 +235,7 @@ const translations = {
       siteLabel: "Website",
       livePortfolioLabel: "Live Portfolio",
       project1Subtitle:
-        "A personalized dementia companionship system that combines AI, RAG semantic retrieval, ChatGPT, and behavior recognition to address care workforce shortages and companionship gaps in an aging society. Built around proactive companionship, personalized interaction, and encouraging care, it supports daily conversation, meals, exercise, and memory-based interaction while analyzing chat history, behavior patterns, and lifestyle habits to deliver a more personal care experience.",
+        "Focused on dementia care workforce shortages, I led the requirement definition, AI integration, and Android delivery for a practical companion system. It combines nostalgia chat, RAG semantic retrieval, ChatGPT interaction, and behavior recognition with YOLOv11 / ML Kit monitoring so caregivers receive real-time alerts and personalized support.",
       project2Subtitle:
         "A drone-assisted agriculture matching system that combines UAV inspection, YOLO-based visual recognition, and a collaborative web platform to address labor shortages, low field inspection efficiency, and difficult task coordination. Farmers can create jobs, configure field tasks, and coordinate workflows through the platform while DJI Tello and real-time image return support field observation and improve both job matching and on-site inspection efficiency.",
       projectHighlightLabel: "Project Focus",
@@ -245,12 +246,17 @@ const translations = {
       achievementsLabel: "Achievements",
       projectPhotosEyebrow: "Materials",
       projectPhotos: "Competition Experience",
-      project1Function1: "Nostalgia chat with a RAG knowledge base",
-      project1Function2: "ML Kit pose-based exercise detection",
-      project1Function3: "YOLOv11 meal recognition",
-      project1Function4: "Safe-zone anti-wandering system",
-      project1Function5: "Daily scale-based interaction assessment",
-      project1Function6: "Health education consultation and care suggestions",
+      project1Function1:
+        "Nostalgia chat with a RAG knowledge base for improved engagement",
+      project1Function2:
+        "ML Kit pose-based exercise detection for activity monitoring",
+      project1Function3: "YOLOv11 meal recognition for dietary awareness",
+      project1Function4:
+        "Safe-zone anti-wandering system for immediate exit alerts",
+      project1Function5:
+        "Daily scale-based interaction assessment for mood and activity tracking",
+      project1Function6:
+        "Health education consultation and care suggestions for caregiver support",
       project1Tech1: "YOLOv11 (behavior detection)",
       project1Tech2: "Google ML Kit (pose detection)",
       project1Tech3:
@@ -259,9 +265,10 @@ const translations = {
       project1Tech5: "Android (mobile application)",
       project1Tech6: "MySQL (user and care data management)",
       project1Achievement1: "1st Place - National AI Innovation Competition",
-      project1Achievement2: "AI-powered personalized dementia care system",
+      project1Achievement2:
+        "Delivered a full dementia care MVP with monitoring and companionship",
       project1Achievement3:
-        "Real-time monitoring with conversational companionship",
+        "Integrated AI vision and conversational support to improve daily safety and engagement",
       project2Function1: "Drone-assisted farmland inspection",
       project2Function2: "Agricultural job matching platform",
       project2Function3: "Task scheduling and field setup",
@@ -363,7 +370,31 @@ document.querySelectorAll(".work-toggle").forEach((button) => {
 
     const nextExpanded = !isExpanded;
     button.setAttribute("aria-expanded", String(nextExpanded));
-    panel.hidden = !nextExpanded;
+
+    if (nextExpanded) {
+      panel.classList.add("is-open");
+      panel.hidden = false;
+      const panelHeight = panel.scrollHeight;
+      panel.style.maxHeight = `${panelHeight}px`;
+      panel.style.opacity = "1";
+    } else {
+      panel.style.maxHeight = `${panel.scrollHeight}px`;
+      requestAnimationFrame(() => {
+        panel.style.maxHeight = "0";
+        panel.style.opacity = "0";
+      });
+      panel.addEventListener(
+        "transitionend",
+        () => {
+          if (!nextExpanded) {
+            panel.hidden = true;
+            panel.classList.remove("is-open");
+            panel.style.maxHeight = "";
+          }
+        },
+        { once: true },
+      );
+    }
 
     const workCard = panel.querySelector(".work-card");
     if (workCard) {
