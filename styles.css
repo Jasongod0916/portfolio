@@ -16,6 +16,11 @@
   --radius-lg: 22px;
   --radius-md: 16px;
   --container: 1180px;
+  --font-weight-regular: 400;
+  --font-weight-medium: 500;
+  --font-weight-semibold: 600;
+  --font-weight-bold: 700;
+  --font-weight-black: 800;
 }
 
 * {
@@ -39,7 +44,7 @@ body {
     "Segoe UI",
     "Helvetica Neue",
     sans-serif;
-  font-weight: 500;
+  font-weight: var(--font-weight-regular);
   color: var(--text);
   background:
     radial-gradient(
@@ -107,7 +112,7 @@ ul {
 .site-brand {
   flex: 0 0 auto;
   font-size: 1.18rem;
-  font-weight: 800;
+  font-weight: var(--font-weight-black);
   letter-spacing: -0.03em;
 }
 
@@ -123,7 +128,7 @@ ul {
   position: relative;
   color: var(--muted);
   font-size: 0.95rem;
-  font-weight: 700;
+  font-weight: var(--font-weight-bold);
   transition: color 180ms ease;
 }
 
@@ -160,7 +165,7 @@ ul {
 .language-switcher-label {
   color: var(--accent);
   font-size: 0.76rem;
-  font-weight: 800;
+  font-weight: var(--font-weight-black);
   letter-spacing: 0.1em;
   text-transform: uppercase;
 }
@@ -239,7 +244,7 @@ ul {
 .section-kicker {
   color: var(--accent);
   font-size: 0.82rem;
-  font-weight: 800;
+  font-weight: var(--font-weight-black);
   letter-spacing: 0.14em;
   text-transform: uppercase;
 }
@@ -249,7 +254,7 @@ ul {
   font-size: clamp(2.6rem, 5vw, 4.8rem);
   line-height: 0.96;
   letter-spacing: -0.06em;
-  font-weight: 800;
+  font-weight: var(--font-weight-black);
 }
 
 .hero-title-line {
@@ -303,7 +308,7 @@ ul {
   padding: 0 18px;
   border-radius: 999px;
   font-size: 0.94rem;
-  font-weight: 700;
+  font-weight: var(--font-weight-bold);
   transition:
     transform 180ms ease,
     border-color 180ms ease,
@@ -378,7 +383,7 @@ ul {
 .meta-list dt {
   color: var(--accent);
   font-size: 1.25rem;
-  font-weight: 800;
+  font-weight: var(--font-weight-black);
   letter-spacing: 0.12em;
   text-transform: uppercase;
 }
@@ -409,7 +414,7 @@ ul {
 .spotlight-meta,
 .card-meta {
   color: var(--text);
-  font-weight: 700;
+  font-weight: var(--font-weight-bold);
 }
 
 .spotlight-points,
@@ -460,6 +465,7 @@ ul {
   font-size: clamp(1.6rem, 2.4vw, 2.2rem);
   line-height: 1.05;
   letter-spacing: -0.04em;
+  font-weight: var(--font-weight-bold);
 }
 
 .work-group {
@@ -467,6 +473,10 @@ ul {
   gap: 16px;
   margin-top: 32px;
   padding-top: 0;
+}
+
+.work-group + .section-heading {
+  margin-top: 32px;
 }
 
 .work-group + .work-group {
@@ -559,7 +569,7 @@ ul {
   right: 20px;
   color: var(--accent);
   font-size: 1.4rem;
-  font-weight: 700;
+  font-weight: var(--font-weight-bold);
   line-height: 1;
 }
 
@@ -570,7 +580,7 @@ ul {
 .work-toggle-tag {
   color: var(--accent);
   font-size: 0.8rem;
-  font-weight: 800;
+  font-weight: var(--font-weight-black);
   letter-spacing: 0.12em;
   text-transform: uppercase;
 }
@@ -578,7 +588,7 @@ ul {
 .work-toggle-title {
   color: var(--text);
   font-size: 1.95rem;
-  font-weight: 800;
+  font-weight: var(--font-weight-bold);
   line-height: 1.08;
   letter-spacing: -0.05em;
 }
@@ -586,7 +596,7 @@ ul {
 .work-toggle-meta {
   color: var(--muted);
   font-size: 1rem;
-  font-weight: 600;
+  font-weight: var(--font-weight-semibold);
 }
 
 .work-panel {
@@ -620,6 +630,7 @@ ul {
   font-size: 1.55rem;
   line-height: 1.1;
   letter-spacing: -0.04em;
+  font-weight: var(--font-weight-bold);
 }
 
 .project-card h3 {
@@ -773,7 +784,7 @@ ul {
   border-left: 3px solid rgba(184, 92, 44, 0.22);
   color: var(--text);
   font-size: 0.95rem;
-  font-weight: 600;
+  font-weight: var(--font-weight-semibold);
   line-height: 1.7;
 }
 
@@ -881,7 +892,7 @@ ul {
   margin-top: 12px;
   color: var(--text);
   font-size: 0.96rem;
-  font-weight: 700;
+  font-weight: var(--font-weight-bold);
   line-height: 1.55;
   text-align: center;
 }

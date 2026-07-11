@@ -1,0 +1,166 @@
+<!doctype html>
+<html lang="zh-Hant">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>AI Dementia Care System | Jason Portfolio</title>
+    <meta
+      id="page-description"
+      name="description"
+      content="AI Dementia Care System project page with demo video, technologies, and supporting materials."
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&display=swap"
+      rel="stylesheet"
+    />
+    <script>
+      document.documentElement.classList.add("js");
+    </script>
+    <link rel="stylesheet" href="styles.css?v=3" />
+  </head>
+  <body data-page="project1">
+    <header class="site-header">
+      <div class="site-header-inner">
+        <a class="site-brand" href="index.html">Jason Portfolio</a>
+
+        <nav class="top-nav" aria-label="Primary">
+          <a href="index.html#home" data-i18n="navHome">首頁</a>
+          <a href="index.html#projects" data-i18n="navProjects">Projects</a>
+          <a href="index.html#works" data-i18n="navWorks">Works</a>
+          <a href="index.html#contact" data-i18n="navContact">Contact</a>
+        </nav>
+
+        <div class="language-switcher">
+          <label class="language-switcher-label" for="language-select"
+            >Language</label
+          >
+          <select
+            id="language-select"
+            class="language-select"
+            aria-label="Language selector"
+          >
+            <option value="zh-Hant">中文</option>
+            <option value="en">English</option>
+          </select>
+        </div>
+      </div>
+    </header>
+
+    <main class="site-main project-main">
+      <section class="project-hero reveal">
+        <div class="project-hero-copy">
+          <p class="section-kicker" data-i18n="project01Tag">專案 01</p>
+          <h1 data-i18n="project1Title">AI失智照護系統</h1>
+          <span class="project-pill" data-i18n="project1Meta"
+            >Android AI App</span
+          >
+          <p class="project-intro" data-i18n="project1Subtitle">
+            一套結合 AI、RAG 語義檢索、ChatGPT
+            與行為辨識技術的個人化失智陪伴系統，致力於解決高齡化社會下失智照護人力不足與陪伴缺口問題。系統透過「主動式陪伴」、「個人化互動」與「鼓勵式照顧」三大核心理念，陪伴患者進行日常聊天、飲食、運動與回憶互動，並透過
+            AI
+            分析使用者的聊天歷史、行為模式與生活習慣，提供更貼近個人的照護體驗。
+          </p>
+        </div>
+        <div class="project-aside">
+          <p class="project-aside-label" data-i18n="projectHighlightLabel">
+            Project Focus
+          </p>
+          <ul class="summary-list">
+            <li data-i18n="homeProject1Point1">即時監控與失智陪伴整合</li>
+            <li data-i18n="homeProject1Point2">RAG 與 ChatGPT 驅動互動體驗</li>
+            <li data-i18n="homeProject1Point3">全國 AI 創新競賽第一名</li>
+          </ul>
+        </div>
+      </section>
+
+      <section class="media-section reveal">
+        <div class="section-heading inline-heading">
+          <p class="section-kicker" data-i18n="demoVideoEyebrow">Demo</p>
+          <h2 data-i18n="demoVideo">展示影片</h2>
+        </div>
+        <div class="media-frame">
+          <video
+            class="project-video"
+            controls
+            muted
+            preload="metadata"
+            playsinline
+            data-autoplay
+            src="assets/videos/ai-dementia-care-system.mp4"
+          ></video>
+        </div>
+      </section>
+
+      <section class="details-grid reveal">
+        <article class="detail-card">
+          <p class="detail-card-title" data-i18n="functionsLabel">功能</p>
+          <ul class="detail-list">
+            <li data-i18n="project1Function1">懷舊聊天與 RAG 知識庫</li>
+            <li data-i18n="project1Function2">MLKit 姿勢辨識運動偵測</li>
+            <li data-i18n="project1Function3">YOLOv11 飲食辨識</li>
+            <li data-i18n="project1Function4">安全區防走失系統</li>
+            <li data-i18n="project1Function5">每日量表互動檢測</li>
+            <li data-i18n="project1Function6">衛教諮詢與照護建議</li>
+          </ul>
+        </article>
+
+        <article class="detail-card">
+          <p class="detail-card-title" data-i18n="technologyLabel">技術</p>
+          <ul class="detail-list">
+            <li data-i18n="project1Tech1">YOLOv11（行為偵測）</li>
+            <li data-i18n="project1Tech2">Google ML Kit（姿態偵測）</li>
+            <li data-i18n="project1Tech3">
+              RAG（nostalgia content retrieval and response generation）
+            </li>
+            <li data-i18n="project1Tech4">ChatGPT API（對話互動）</li>
+            <li data-i18n="project1Tech5">Android（行動應用程式）</li>
+            <li data-i18n="project1Tech6">MySQL（使用者與照護資料管理）</li>
+          </ul>
+        </article>
+
+        <article class="detail-card">
+          <p class="detail-card-title" data-i18n="achievementsLabel">成果</p>
+          <ul class="detail-list">
+            <li data-i18n="project1Achievement1">全國 AI 創新競賽第一名</li>
+            <li data-i18n="project1Achievement2">
+              AI 驅動的個人化失智照護系統
+            </li>
+            <li data-i18n="project1Achievement3">
+              結合即時監控與對話式陪伴功能
+            </li>
+          </ul>
+        </article>
+      </section>
+
+      <section class="section-block reveal">
+        <div class="section-heading inline-heading">
+          <h2 data-i18n="projectPhotos">專案照片</h2>
+        </div>
+        <div class="photo-grid">
+          <div class="photo-card">
+            <img
+              class="certificate-image"
+              src="assets/awards/1_%E5%85%A8%E5%9C%8BAI%E5%89%B5%E6%84%8F%E5%AF%A6%E4%BD%9C%E7%AB%B6%E8%B3%BD.JPG"
+              alt="National AI Innovation Competition award certificate"
+              loading="lazy"
+            />
+            <p class="photo-caption">2024全國AI創意實作競賽 第一名</p>
+          </div>
+          <div class="photo-card">
+            <img
+              class="certificate-image"
+              src="assets/awards/1_%E9%BB%91%E5%AE%A2%E6%9D%BE.JPG"
+              alt="Project presentation or hackathon photo"
+              loading="lazy"
+            />
+            <p class="photo-caption">2024永續智慧創新黑客松競賽 佳作</p>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <script src="script.js?v=3"></script>
+  </body>
+</html>
