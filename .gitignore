@@ -1,0 +1,13 @@
+**/node_modules/
+
+# Local cleanup/archive folders
+archive_cleanup/
+
+# Browser verification profiles
+.chrome-*/
+
+# Generated verification artifacts
+*.log
+future-debug.png
+future-swiper-verify.png
+pagination-*-dom.html

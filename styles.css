@@ -1,21 +1,103 @@
+/* ========================================
+   DESIGN SYSTEM - Global CSS Variables
+   ======================================== */
+
 :root {
-  --bg: #f4efe8;
-  --bg-accent: #ede4d6;
-  --surface: rgba(255, 252, 247, 0.9);
-  --surface-strong: #fffdf9;
-  --surface-soft: #f8f3ec;
-  --line: rgba(52, 43, 31, 0.12);
-  --line-strong: rgba(52, 43, 31, 0.2);
-  --text: #1f2430;
-  --muted: #667085;
-  --accent: #b85c2c;
-  --accent-soft: rgba(184, 92, 44, 0.12);
-  --shadow: 0 22px 54px rgba(40, 26, 16, 0.08);
-  --shadow-soft: 0 10px 24px rgba(40, 26, 16, 0.06);
-  --radius-xl: 28px;
-  --radius-lg: 22px;
-  --radius-md: 16px;
-  --container: 1180px;
+  /* Color Palette - Warm Neutral Scheme */
+  --bg: #f4efe8; /* Page background */
+  --bg-accent: #ede4d6; /* Accent background */
+  --surface: rgba(255, 252, 247, 0.9); /* Surface semi-transparent */
+  --surface-strong: #fffdf9; /* Strong opaque surface */
+  --surface-soft: #f8f3ec; /* Soft background */
+  --line: rgba(52, 43, 31, 0.12); /* Subtle border/divider */
+  --line-strong: rgba(52, 43, 31, 0.2); /* Prominent border */
+  --text: #1f2430; /* Primary text color */
+  --muted: #667085; /* Muted/secondary text */
+  --accent: #b85c2c; /* Brand accent color (warm brown) */
+  --accent-soft: rgba(184, 92, 44, 0.12); /* Soft accent background */
+
+  /* Shadow System - Depth & Elevation */
+  --shadow: 0 22px 54px rgba(40, 26, 16, 0.08); /* Primary shadow */
+  --shadow-drop: drop-shadow(
+    0 22px 54px rgba(40, 26, 16, 0.08)
+  ); /* For SVG/masks */
+  --shadow-soft: 0 10px 24px rgba(40, 26, 16, 0.06); /* Subtle shadow */
+
+  /* Border Radius - Apple-inspired Squircle Design */
+  --radius-xl: 65px; /* Extra large (work cards) */
+  --radius-lg: 65px; /* Large containers */
+  --radius-md: 65px; /* Medium components */
+  --radius-sm: 16px; /* Small UI elements */
+  --radius-control: 16px; /* Form controls */
+  --radius-compact: 10px; /* Compact elements */
+  --radius-cta: 999px; /* Pill-shaped buttons */
+  --squircle-smoothness: 0.6; /* Squircle curve parameter (0-1 range) */
+  /* Layout */
+  --container: 1180px; /* Max content width */
+
+  /* Glass Morphism System - Frosted glass effect */
+  --glass-bg: linear-gradient(
+    145deg,
+    rgba(255, 255, 255, 0.64),
+    rgba(255, 255, 255, 0.24)
+  ); /* Background gradient for glass layer */
+  --glass-border: rgba(255, 255, 255, 0.82); /* Strong glass border */
+  --glass-border-soft: rgba(255, 255, 255, 0.54); /* Subtle glass border */
+  --glass-sheen: linear-gradient(
+    135deg,
+    rgba(255, 255, 255, 0.72),
+    rgba(255, 255, 255, 0.12) 42%,
+    rgba(255, 255, 255, 0.34)
+  ); /* Surface shine effect overlay */
+  --glass-inner-shadow:
+    inset 0 1px 0 rgba(255, 255, 255, 0.92),
+    inset 0 0 24px rgba(255, 255, 255, 0.32); /* Inner depth */
+  --glass-shadow: var(--glass-inner-shadow), 0 34px 90px rgba(31, 36, 48, 0.14);
+  --glass-drop-shadow: drop-shadow(
+    0 34px 70px rgba(31, 36, 48, 0.14)
+  ); /* SVG shadow */
+  --glass-hover-shadow: 0 26px 56px rgba(31, 36, 48, 0.16);
+  --glass-hover-drop-shadow: drop-shadow(0 26px 56px rgba(31, 36, 48, 0.16));
+  --glass-blur: blur(26px) saturate(1.45); /* Backdrop filter settings */
+  /* Spacing Scale - 8px base */
+  --space-2xs: 0.375rem;
+  --space-xs: 0.5rem;
+  --space-sm: 0.75rem;
+  --space-md: 1rem;
+  --space-lg: 1.375rem;
+  --space-xl: 2rem;
+  --space-2xl: 3rem;
+
+  /* Line Height - Text Layout */
+  --leading-tight: 0.96;
+  --leading-title: 1.08;
+  --leading-body: 1.78;
+  --leading-caption: 1.45;
+
+  /* Animation Timing - Motion Curves */
+  --motion-fast: 180ms ease; /* Quick interactions */
+  --motion-standard: 260ms ease; /* Standard transitions */
+  --motion-panel: 320ms ease; /* Panel animations */
+  --motion-reveal: 640ms cubic-bezier(0.22, 1, 0.36, 1); /* Page reveal (bounce) */
+
+  /* Focus State - Accessibility */
+  --focus-ring: 0 0 0 3px rgba(184, 92, 44, 0.18);
+
+  /* Typography Scale */
+  --text-xs: 0.75rem;
+  --text-sm: 0.875rem;
+  --text-md: 1rem;
+  --text-lg: 1.125rem;
+  --text-xl: 1.5rem;
+  --text-2xl: 2rem;
+  --text-3xl: 3rem;
+  --text-hero: 4.5rem; /* Hero title size */
+
+  /* Squircle Mask Images - Runtime SVG (populated by squircle.js) */
+  --squircle-mask: none; /* Main container mask */
+  --squircle-stroke-mask: none; /* Border stroke mask */
+
+  /* Font Weights */
   --font-weight-regular: 400;
   --font-weight-medium: 500;
   --font-weight-semibold: 600;
@@ -35,16 +117,17 @@ body {
   margin: 0;
   min-height: 100vh;
   font-family:
-    "Microsoft JhengHei UI",
-    "Microsoft JhengHei",
-    "PingFang TC",
-    "Noto Sans TC",
+    system-ui,
     -apple-system,
     BlinkMacSystemFont,
     "Segoe UI",
+    "PingFang TC",
     "Helvetica Neue",
+    Arial,
     sans-serif;
   font-weight: var(--font-weight-regular);
+  font-size: var(--text-md);
+  line-height: var(--leading-caption);
   color: var(--text);
   background:
     radial-gradient(
@@ -102,7 +185,7 @@ ul {
   width: 100%;
   max-width: none;
   margin: 0 auto;
-  padding: 14px 18px;
+  padding: var(--space-sm) var(--space-lg);
   border: 1px solid rgba(255, 255, 255, 0.6);
   border-radius: 0;
   background: rgba(255, 252, 247, 0.78);
@@ -111,9 +194,9 @@ ul {
 
 .site-brand {
   flex: 0 0 auto;
-  font-size: 1.18rem;
+  font-size: var(--text-lg);
   font-weight: var(--font-weight-black);
-  letter-spacing: -0.03em;
+  letter-spacing: 0;
 }
 
 .top-nav {
@@ -121,15 +204,15 @@ ul {
   flex-wrap: wrap;
   align-items: center;
   justify-content: center;
-  gap: 22px;
+  gap: var(--space-lg);
 }
 
 .top-nav a {
   position: relative;
   color: var(--muted);
-  font-size: 0.95rem;
+  font-size: var(--text-sm);
   font-weight: var(--font-weight-bold);
-  transition: color 180ms ease;
+  transition: color var(--motion-fast);
 }
 
 .top-nav a::after {
@@ -142,7 +225,7 @@ ul {
   background: var(--accent);
   transform: scaleX(0);
   transform-origin: left;
-  transition: transform 180ms ease;
+  transition: transform var(--motion-fast);
 }
 
 .top-nav a:hover,
@@ -158,27 +241,27 @@ ul {
 .language-switcher {
   display: inline-flex;
   align-items: center;
-  gap: 8px;
+  gap: var(--space-xs);
   flex: 0 0 auto;
 }
 
 .language-switcher-label {
   color: var(--accent);
-  font-size: 0.76rem;
+  font-size: var(--text-xs);
   font-weight: var(--font-weight-black);
-  letter-spacing: 0.1em;
+  letter-spacing: 0;
   text-transform: uppercase;
 }
 
 .language-select {
   min-width: 96px;
-  padding: 8px 34px 8px 12px;
+  padding: var(--space-xs) 34px var(--space-xs) var(--space-sm);
   border: 1px solid var(--line);
-  border-radius: 999px;
+  border-radius: var(--radius-control);
   background: var(--surface-strong);
   color: var(--text);
   font: inherit;
-  font-size: 0.92rem;
+  font-size: var(--text-sm);
   appearance: none;
   background-image:
     linear-gradient(45deg, transparent 50%, var(--accent) 50%),
@@ -195,13 +278,38 @@ ul {
 .language-select:focus {
   outline: none;
   border-color: rgba(184, 92, 44, 0.34);
-  box-shadow: 0 0 0 3px rgba(184, 92, 44, 0.12);
+  box-shadow: var(--focus-ring);
+}
+
+@supports (corner-shape: squircle) {
+  .language-select,
+  .hero-section,
+  .project-hero,
+  .detail-card,
+  .spotlight-card,
+  .project-card,
+  .work-toggle,
+  .certificate-card,
+  .contact-card,
+  .text-link,
+  .project-pill,
+  .media-frame,
+  .project-video,
+  .photo-card,
+  .certificate-preview,
+  .work-card-image,
+  .work-gallery .gallery-track,
+  .squircle-test-card,
+  .gallery-dots button,
+  .meta-list div {
+    corner-shape: squircle;
+  }
 }
 
 .site-main {
   width: min(100%, var(--container));
   margin: 0 auto;
-  padding: 28px clamp(1rem, 3vw, 2rem) 80px;
+  padding: var(--space-xl) clamp(1rem, 3vw, 2rem) 80px;
 }
 
 .hero-section,
@@ -211,25 +319,32 @@ ul {
 .detail-card,
 .spotlight-card,
 .project-card,
-.work-card,
-.contact-card {
-  border: 1px solid rgba(255, 255, 255, 0.7);
-  background: linear-gradient(
+.work-toggle,
+.certificate-card,
+.contact-card,
+.squircle-test-card {
+  --surface-fill: linear-gradient(
     180deg,
     rgba(255, 253, 249, 0.94),
     rgba(248, 242, 234, 0.92)
   );
-  box-shadow: var(--shadow);
+  --surface-stroke: rgba(255, 255, 255, 0.7);
+  --surface-shadow: var(--shadow);
+  --surface-filter-shadow: var(--shadow-drop);
+  --surface-inner-shadow: none;
+  border: 1px solid var(--surface-stroke);
+  background: var(--surface-fill);
+  box-shadow: var(--surface-shadow);
 }
 
 .hero-section,
 .project-hero {
   display: grid;
   grid-template-columns: minmax(0, 1.15fr) minmax(300px, 0.85fr);
-  gap: clamp(1.2rem, 2vw, 2rem);
+  gap: var(--space-xl);
   align-items: stretch;
   margin-top: 6px;
-  padding: clamp(1.6rem, 3vw, 2.6rem);
+  padding: clamp(var(--space-xl), 3vw, var(--space-2xl));
   border-radius: var(--radius-xl);
 }
 
@@ -237,23 +352,23 @@ ul {
 .project-hero-copy {
   display: grid;
   align-content: center;
-  gap: 18px;
+  gap: var(--space-lg);
   min-width: 0;
 }
 
 .section-kicker {
   color: var(--accent);
-  font-size: 0.82rem;
+  font-size: var(--text-xs);
   font-weight: var(--font-weight-black);
-  letter-spacing: 0.14em;
+  letter-spacing: 0;
   text-transform: uppercase;
 }
 
 .hero-section h1,
 .project-hero h1 {
-  font-size: clamp(2.6rem, 5vw, 4.8rem);
-  line-height: 0.96;
-  letter-spacing: -0.06em;
+  font-size: var(--text-hero);
+  line-height: var(--leading-tight);
+  letter-spacing: 0;
   font-weight: var(--font-weight-black);
 }
 
@@ -265,11 +380,19 @@ ul {
   max-width: 15ch;
 }
 
+.project-hero--single {
+  grid-template-columns: 1fr;
+}
+
+.project-hero--single .project-hero-copy {
+  max-width: 72ch;
+}
+
 .project-title-zh {
   color: var(--accent);
-  font-size: 1rem;
+  font-size: var(--text-md);
   font-weight: 800;
-  letter-spacing: 0.08em;
+  letter-spacing: 0;
 }
 
 .hero-lead,
@@ -278,17 +401,17 @@ ul {
 .card-description,
 .spotlight-description {
   color: var(--muted);
-  line-height: 1.78;
+  line-height: var(--leading-body);
 }
 
 .hero-lead {
   max-width: 60ch;
-  font-size: 1.04rem;
+  font-size: var(--text-lg);
 }
 
 .hero-support {
   color: var(--muted);
-  line-height: 1.72;
+  line-height: var(--leading-body);
   max-width: 58ch;
 }
 
@@ -296,7 +419,7 @@ ul {
 .inline-actions {
   display: flex;
   flex-wrap: wrap;
-  gap: 12px;
+  gap: var(--space-sm);
 }
 
 .button,
@@ -306,15 +429,24 @@ ul {
   justify-content: center;
   min-height: 46px;
   padding: 0 18px;
-  border-radius: 999px;
-  font-size: 0.94rem;
+  border-radius: var(--radius-control);
+  font-size: var(--text-sm);
   font-weight: var(--font-weight-bold);
   transition:
-    transform 180ms ease,
-    border-color 180ms ease,
-    background-color 180ms ease,
-    color 180ms ease,
-    box-shadow 180ms ease;
+    transform var(--motion-fast),
+    border-color var(--motion-fast),
+    background-color var(--motion-fast),
+    color var(--motion-fast),
+    box-shadow var(--motion-fast);
+}
+
+.interactive-surface {
+  transition:
+    transform var(--motion-fast),
+    border-color var(--motion-fast),
+    background-color var(--motion-fast),
+    color var(--motion-fast),
+    box-shadow var(--motion-fast);
 }
 
 .button:hover,
@@ -325,7 +457,6 @@ ul {
 .project-card:focus-visible,
 .spotlight-card:hover,
 .spotlight-card:focus-visible,
-.work-card:hover,
 .contact-card:hover {
   transform: translateY(-2px);
 }
@@ -334,6 +465,7 @@ ul {
   color: #fff8f3;
   background: linear-gradient(135deg, #d0794f 0%, #b85c2c 100%);
   border: 1px solid transparent;
+  border-radius: var(--radius-cta);
   box-shadow: 0 16px 30px rgba(184, 92, 44, 0.16);
 }
 
@@ -352,10 +484,10 @@ ul {
 
 .spotlight-card {
   display: grid;
-  gap: 16px;
+  gap: var(--space-md);
   align-content: start;
-  padding: 22px;
-  border-radius: calc(var(--radius-xl) - 4px);
+  padding: var(--space-lg);
+  border-radius: var(--radius-lg);
   background:
     linear-gradient(
       180deg,
@@ -369,7 +501,7 @@ ul {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  gap: 12px;
+  gap: var(--space-sm);
 }
 
 .spotlight-label,
@@ -382,15 +514,15 @@ ul {
 .detail-card-title,
 .meta-list dt {
   color: var(--accent);
-  font-size: 1.25rem;
+  font-size: var(--text-lg);
   font-weight: var(--font-weight-black);
-  letter-spacing: 0.12em;
+  letter-spacing: 0;
   text-transform: uppercase;
 }
 
 .detail-card-title {
-  font-size: clamp(1rem, 1.5vw, 1.25rem);
-  letter-spacing: 0.08em;
+  font-size: var(--text-md);
+  letter-spacing: 0;
   margin-bottom: 10px;
 }
 
@@ -402,13 +534,13 @@ ul {
 .card-overline,
 .project-aside-label,
 .meta-list dt {
-  font-size: 0.78rem;
+  font-size: var(--text-xs);
 }
 
 .spotlight-card h2 {
-  font-size: clamp(1.75rem, 2.6vw, 2.3rem);
-  line-height: 1.05;
-  letter-spacing: -0.05em;
+  font-size: var(--text-2xl);
+  line-height: var(--leading-title);
+  letter-spacing: 0;
 }
 
 .spotlight-meta,
@@ -421,7 +553,7 @@ ul {
 .summary-list,
 .detail-list {
   display: grid;
-  gap: 12px;
+  gap: var(--space-sm);
   list-style: none;
 }
 
@@ -431,7 +563,7 @@ ul {
   position: relative;
   padding-left: 18px;
   color: var(--text);
-  line-height: 1.62;
+  line-height: var(--leading-body);
 }
 
 .spotlight-points li::before,
@@ -450,128 +582,353 @@ ul {
 
 .section-block,
 .media-section {
-  margin-top: 28px;
+  margin-top: var(--space-xl);
   padding: clamp(1.35rem, 2.5vw, 2rem);
   border-radius: var(--radius-xl);
 }
 
 .section-heading {
   display: grid;
-  gap: 10px;
-  margin-bottom: 24px;
+  gap: var(--space-sm);
+  margin-bottom: var(--space-lg);
+}
+
+#projects,
+#works,
+#certificates,
+#contact {
+  --surface-fill: transparent;
+  --surface-stroke: transparent;
+  --surface-shadow: none;
+  padding-inline: 0;
+  background: transparent;
+  border-color: transparent;
+  box-shadow: none;
+}
+
+#projects.squircle-surface::before,
+#works.squircle-surface::before,
+#certificates.squircle-surface::before,
+#contact.squircle-surface::before {
+  display: none;
+}
+
+#projects.squircle-surface::after,
+#works.squircle-surface::after,
+#certificates.squircle-surface::after,
+#contact.squircle-surface::after {
+  display: none;
 }
 
 .section-heading h2 {
-  font-size: clamp(1.6rem, 2.4vw, 2.2rem);
-  line-height: 1.05;
-  letter-spacing: -0.04em;
+  font-size: var(--text-3xl);
+  line-height: var(--leading-title);
+  letter-spacing: 0;
   font-weight: var(--font-weight-bold);
 }
 
 .work-group {
   display: grid;
-  gap: 16px;
-  margin-top: 32px;
+  gap: var(--space-md);
+  margin-top: var(--space-xl);
   padding-top: 0;
 }
 
 .work-group + .section-heading {
-  margin-top: 32px;
+  margin-top: var(--space-xl);
 }
 
 .work-group + .work-group {
   margin-top: 42px;
-  padding-top: 28px;
+  padding-top: var(--space-xl);
   border-top: 1px solid rgba(31, 36, 48, 0.08);
 }
 
 .work-group-title {
   color: var(--text);
-  font-size: clamp(1.3rem, 2.1vw, 1.6rem);
+  font-size: var(--text-xl);
   font-weight: 800;
-  letter-spacing: -0.02em;
+  letter-spacing: 0;
   text-transform: none;
   margin: 0;
   padding-bottom: 4px;
 }
 
-#projects .section-heading h2 {
-  font-size: clamp(2.2rem, 4vw, 2.875rem);
+/* #projects .section-heading h2 {
+  font-size: var(--text-3xl);
 }
 
 #works .section-heading h2 {
-  font-size: clamp(2rem, 3.2vw, 2.1875rem);
-}
+  font-size: var(--text-3xl);
+} */
 
 .inline-heading {
-  margin-bottom: 16px;
+  margin-bottom: var(--space-md);
 }
 
 .project-grid,
 .work-grid,
+.certificate-grid,
 .contact-grid {
   display: grid;
-  gap: 18px;
+  gap: var(--space-lg);
+}
+
+.squircle-test-grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: var(--space-lg);
+  margin-top: var(--space-lg);
 }
 
 .project-grid {
   grid-template-columns: repeat(2, minmax(0, 1fr));
 }
 
+/* ========================================
+   GLASS MORPHISM - Frosted Glass Effect
+   ======================================== */
+
+.glass-surface {
+  /* Surface fill and styling variables */
+  --surface-fill: var(--glass-bg);
+  --surface-stroke: var(
+    --glass-border
+  ); /* Stronger border - merged from --prominent */
+  --surface-shadow: var(--glass-shadow);
+  --surface-filter-shadow: var(--glass-drop-shadow);
+  --surface-inner-shadow: var(--glass-inner-shadow);
+
+  position: relative;
+  overflow: hidden;
+
+  /* Backdrop blur creates the frosted glass effect by blurring content behind */
+  backdrop-filter: var(--glass-blur);
+  -webkit-backdrop-filter: var(--glass-blur); /* Safari support */
+}
+
+/* Shine overlay layer - creates surface light reflection */
+.glass-surface::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+  background: var(--glass-sheen); /* Gradient shine */
+  opacity: 0.7;
+}
+
+/* Ensure all children render above the shine layer */
+.glass-surface > * {
+  position: relative;
+  z-index: 1; /* Above ::before shine layer */
+}
+
+/* ========================================
+   SQUIRCLE SURFACE - Apple-Style Corners
+   ======================================== */
+
+.squircle-surface {
+  /* Inherit surface properties from glass or other parents */
+  --squircle-fill: var(--surface-fill);
+  --squircle-stroke: var(--surface-stroke);
+  --squircle-filter-shadow: var(--surface-filter-shadow);
+  --squircle-inner-shadow: var(--surface-inner-shadow);
+
+  position: relative;
+  isolation: isolate; /* Create new stacking context for z-index isolation */
+  overflow: visible; /* Allow mask to define shape, not box boundary */
+
+  /* Strip default styling - we'll use ::before/::after for background */
+  border-color: transparent;
+  background: transparent;
+  box-shadow: none;
+}
+
+/* Main fill layer - contains background and shadow */
+.squircle-surface::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  z-index: 0; /* Below content */
+  pointer-events: none;
+  background: var(--squircle-fill);
+  box-shadow: var(--squircle-inner-shadow);
+  filter: var(--squircle-filter-shadow);
+
+  /* SVG mask-image creates the squircle shape (populated by squircle.js) */
+  mask-image: var(--squircle-mask);
+  mask-size: 100% 100%;
+  mask-repeat: no-repeat;
+  mask-position: center;
+  transition: filter var(--motion-standard);
+
+  /* WebKit browsers (Safari, Chrome) */
+  -webkit-mask-image: var(--squircle-mask);
+  -webkit-mask-size: 100% 100%;
+  -webkit-mask-repeat: no-repeat;
+  -webkit-mask-position: center;
+}
+
+/* Border/stroke layer - optional border outline */
+.squircle-surface::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  z-index: 1; /* Above fill, below content */
+  pointer-events: none;
+  background: var(
+    --squircle-stroke,
+    rgba(255, 255, 255, 0.7)
+  ); /* Light border */
+
+  /* Stroke mask defines border line */
+  mask-image: var(--squircle-stroke-mask);
+  mask-size: 100% 100%;
+  mask-repeat: no-repeat;
+  mask-position: center;
+
+  /* WebKit support */
+  -webkit-mask-image: var(--squircle-stroke-mask);
+  -webkit-mask-size: 100% 100%;
+  -webkit-mask-repeat: no-repeat;
+  -webkit-mask-position: center;
+}
+
+/* Ensure all child elements render above the background/border layers */
+.squircle-surface > * {
+  position: relative;
+  z-index: 2; /* Above ::before and ::after */
+}
+
+/* Combination: Squircle shape + Glass morphism effect */
+.squircle-surface.glass-surface {
+  overflow: visible; /* Squircle mask controls shape, not box */
+  backdrop-filter: none; /* Disable background blur (applied to ::before instead) */
+  -webkit-backdrop-filter: none;
+}
+
+/* Merge glass shine and blur into the masked squircle shape */
+.squircle-surface.glass-surface::before {
+  background:
+    var(--glass-sheen), var(--squircle-fill); /* Shine + fill gradient */
+  backdrop-filter: var(--glass-blur); /* Apply blur to this layer */
+  -webkit-backdrop-filter: var(--glass-blur); /* Safari */
+  opacity: 1; /* Full opacity for masked glass effect */
+}
+
+.squircle-surface.media-frame {
+  --squircle-fill: #1b2231;
+  --squircle-stroke: var(--line);
+}
+
+.squircle-surface.photo-card {
+  --squircle-fill: rgba(255, 255, 255, 0.72);
+  --squircle-stroke: var(--line);
+}
+
+.squircle-surface.certificate-preview,
+.squircle-mask-direct {
+  border-radius: 0;
+  mask-image: var(--squircle-mask);
+  mask-size: 100% 100%;
+  mask-repeat: no-repeat;
+  mask-position: center;
+  -webkit-mask-image: var(--squircle-mask);
+  -webkit-mask-size: 100% 100%;
+  -webkit-mask-repeat: no-repeat;
+  -webkit-mask-position: center;
+}
+
+.squircle-surface.certificate-preview {
+  overflow: hidden;
+  --squircle-fill: #fff;
+  --squircle-stroke: var(--line);
+}
+
+.project-pill.squircle-surface {
+  --squircle-fill: var(--accent-soft);
+  --squircle-stroke: transparent;
+}
+
+.meta-list div.squircle-surface {
+  --squircle-fill: rgba(255, 255, 255, 0.72);
+  --squircle-stroke: rgba(31, 36, 48, 0.08);
+}
+
+.gallery-control.squircle-surface {
+  --squircle-fill: rgba(255, 255, 255, 0.95);
+  --squircle-stroke: transparent;
+}
+
+.gallery-dots button.squircle-surface {
+  --squircle-fill: rgba(255, 255, 255, 0.8);
+  --squircle-stroke: transparent;
+}
+
+.gallery-dots button.squircle-surface.is-active {
+  --squircle-fill: var(--accent);
+}
+
 .work-grid {
   grid-template-columns: 1fr;
 }
 
+.certificate-grid {
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  align-items: start;
+}
+
+.certificate-card {
+  display: grid;
+  gap: var(--space-md);
+  padding: var(--space-lg);
+  border-radius: var(--radius-lg);
+}
+
+.certificate-title {
+  margin: 0;
+  color: var(--text);
+  font-size: var(--text-xl);
+  font-weight: var(--font-weight-bold);
+  line-height: var(--leading-title);
+}
+
 .work-accordion {
   display: grid;
-  gap: 14px;
+  gap: var(--space-sm);
 }
 
 .work-toggle {
   position: relative;
   display: grid;
-  gap: 8px;
+  gap: var(--space-xs);
   width: 100%;
-  padding: 22px;
-  border: 1px solid rgba(255, 255, 255, 0.7);
+  padding: var(--space-lg);
   border-radius: var(--radius-lg);
-  background: linear-gradient(
-    180deg,
-    rgba(255, 253, 249, 0.94),
-    rgba(248, 242, 234, 0.92)
-  );
-  box-shadow: var(--shadow);
   text-align: left;
   cursor: pointer;
   transition:
-    transform 220ms ease,
-    box-shadow 220ms ease,
-    border-color 220ms ease,
-    background-color 220ms ease;
+    transform var(--motion-standard),
+    box-shadow var(--motion-standard),
+    border-color var(--motion-standard),
+    background-color var(--motion-standard);
 }
 
 .work-toggle:hover,
 .work-toggle:focus-visible {
   transform: translateY(-2px);
-  box-shadow: 0 24px 42px rgba(31, 36, 48, 0.14);
-  border-color: rgba(184, 92, 44, 0.2);
-  background: linear-gradient(
-    180deg,
-    rgba(255, 255, 255, 0.95),
-    rgba(246, 239, 228, 0.96)
-  );
 }
 
 .work-toggle::after {
-  content: "+";
+  content: "";
   position: absolute;
   top: 20px;
   right: 20px;
   color: var(--accent);
-  font-size: 1.4rem;
+  font-size: var(--text-xl);
   font-weight: var(--font-weight-bold);
   line-height: 1;
-  transition: transform 220ms ease;
+  transition: transform var(--motion-standard);
 }
 
 .work-toggle[aria-expanded="true"]::after {
@@ -580,23 +937,47 @@ ul {
 
 .work-toggle-tag {
   color: var(--accent);
-  font-size: 0.8rem;
+  font-size: var(--text-xs);
   font-weight: var(--font-weight-black);
-  letter-spacing: 0.12em;
+  letter-spacing: 0;
   text-transform: uppercase;
 }
 
 .work-toggle-title {
   color: var(--text);
-  font-size: 1.95rem;
+  font-size: var(--text-2xl);
   font-weight: var(--font-weight-bold);
-  line-height: 1.08;
-  letter-spacing: -0.05em;
+  line-height: var(--leading-title);
+  letter-spacing: 0;
+}
+
+.work-title-header {
+  display: grid;
+  gap: var(--space-xs);
+  padding: var(--space-lg);
+  text-align: left;
+}
+
+.work-title-header .work-toggle-tag {
+  color: var(--accent);
+  font-size: var(--text-xs);
+  font-weight: var(--font-weight-black);
+  letter-spacing: 0;
+  text-transform: uppercase;
+}
+
+.work-title-header .work-toggle-title {
+  color: var(--text);
+  font-size: var(--text-2xl);
+  font-weight: var(--font-weight-bold);
+  line-height: var(--leading-title);
+  letter-spacing: 0;
+  margin: 0;
 }
 
 .work-toggle-meta {
   color: var(--muted);
-  font-size: 1rem;
+  font-size: var(--text-md);
   font-weight: var(--font-weight-semibold);
 }
 
@@ -606,8 +987,8 @@ ul {
   max-height: 0;
   opacity: 0;
   transition:
-    max-height 320ms ease,
-    opacity 320ms ease;
+    max-height var(--motion-panel),
+    opacity var(--motion-panel);
 }
 
 .work-panel.is-open {
@@ -626,22 +1007,29 @@ ul {
 .project-card,
 .work-card,
 .contact-card,
-.detail-card {
+.detail-card,
+.squircle-test-card {
   border-radius: var(--radius-lg);
 }
 
 .project-card,
+/* ========================================
+   WORK CARDS - Project Display Component
+   ======================================== */
+
+/* Main work card container - displays as two-column layout */
 .work-card {
   display: grid;
-  gap: 12px;
-  padding: 22px;
+  gap: var(--space-sm);
+  padding: var(--space-lg);
+  /* Content arranged: title → image left + text right */
 }
 
 .project-card h3,
 .work-card h3 {
-  font-size: 1.55rem;
-  line-height: 1.1;
-  letter-spacing: -0.04em;
+  font-size: var(--text-xl);
+  line-height: var(--leading-title);
+  letter-spacing: 0;
   font-weight: var(--font-weight-bold);
 }
 
@@ -650,18 +1038,24 @@ ul {
 }
 
 .project-card .card-overline {
-  font-size: 0.82rem;
+  font-size: var(--text-xs);
 }
 
+/* Grid layout: image on left (0.9fr) + content on right (1.1fr) */
 .work-card {
   grid-template-columns: minmax(230px, 0.9fr) minmax(0, 1.1fr);
-  gap: 18px;
-  align-items: stretch;
+  gap: var(--space-lg);
+  align-items: stretch; /* Full height for both columns */
+  transition: none; /* No animation needed for static layout */
 }
 
-.work-card:hover {
-  transform: translateY(-4px);
-  box-shadow: 0 24px 46px rgba(31, 36, 48, 0.12);
+.work-card > .work-card-media {
+  grid-column: 1;
+}
+
+/* Hide duplicate h3 in body - title already shown in header */
+.work-card-body h3 {
+  display: none;
 }
 
 .work-card-image {
@@ -671,7 +1065,7 @@ ul {
   max-height: 260px;
   aspect-ratio: 16 / 10;
   border: 1px solid rgba(31, 36, 48, 0.08);
-  border-radius: 18px;
+  border-radius: var(--radius-md);
   object-fit: cover;
   object-position: top center;
   background: #fff;
@@ -685,7 +1079,7 @@ ul {
 .work-gallery .gallery-track {
   position: relative;
   overflow: hidden;
-  border-radius: 18px;
+  border-radius: var(--radius-md);
   min-height: 260px;
 }
 
@@ -697,8 +1091,8 @@ ul {
   opacity: 0;
   transform: translateX(24px) scale(0.98);
   transition:
-    opacity 360ms ease,
-    transform 360ms ease;
+    opacity var(--motion-panel),
+    transform var(--motion-panel);
 }
 
 .work-gallery .work-slide.is-active {
@@ -715,7 +1109,7 @@ ul {
   transform: translateX(-50%);
   display: flex;
   align-items: center;
-  gap: 14px;
+  gap: var(--space-sm);
   z-index: 2;
 }
 
@@ -729,12 +1123,12 @@ ul {
   width: 38px;
   height: 38px;
   border: none;
-  border-radius: 50%;
+  border-radius: var(--radius-sm);
   background: rgba(255, 255, 255, 0.95);
   backdrop-filter: blur(12px);
   box-shadow: 0 10px 24px rgba(31, 36, 48, 0.18);
   color: var(--accent);
-  font-size: 1.15rem;
+  font-size: var(--text-lg);
   cursor: pointer;
   display: grid;
   place-items: center;
@@ -763,13 +1157,13 @@ ul {
 .gallery-dots button {
   width: 10px;
   height: 10px;
-  border-radius: 50%;
+  border-radius: var(--radius-compact);
   border: none;
   background: rgba(255, 255, 255, 0.8);
   cursor: pointer;
   transition:
-    transform 180ms ease,
-    background-color 180ms ease;
+    transform var(--motion-fast),
+    background-color var(--motion-fast);
 }
 
 .gallery-dots button:hover,
@@ -795,29 +1189,37 @@ ul {
   padding-left: 14px;
   border-left: 3px solid rgba(184, 92, 44, 0.22);
   color: var(--text);
-  font-size: 0.95rem;
+  font-size: var(--text-sm);
   font-weight: var(--font-weight-semibold);
-  line-height: 1.7;
+  line-height: var(--leading-body);
 }
 
 .meta-list {
   display: grid;
   grid-template-columns: repeat(2, minmax(0, 1fr));
-  gap: 12px;
+  gap: var(--space-sm);
 }
 
 .meta-list div {
   display: grid;
-  gap: 6px;
+  gap: var(--space-2xs);
   padding: 14px 16px;
   border: 1px solid rgba(31, 36, 48, 0.08);
-  border-radius: 16px;
+  border-radius: var(--radius-md);
   background: rgba(255, 255, 255, 0.72);
+}
+
+/* Glass effect styling for meta-list items */
+.meta-list div.glass-surface {
+  border: none;
+  background: transparent; /* Let glass-surface handle background */
+  padding: 14px 16px; /* Keep padding */
+  border-radius: 0; /* Let squircle-surface handle border-radius */
 }
 
 .meta-list dd {
   color: var(--text);
-  line-height: 1.5;
+  line-height: var(--leading-caption);
 }
 
 .meta-list-wide {
@@ -830,14 +1232,14 @@ ul {
 
 .project-main {
   display: grid;
-  gap: 28px;
+  gap: var(--space-xl);
 }
 
 .project-aside {
   display: grid;
   align-content: start;
-  gap: 16px;
-  padding: 22px;
+  gap: var(--space-md);
+  padding: var(--space-lg);
   border-left: 1px solid rgba(31, 36, 48, 0.08);
 }
 
@@ -846,7 +1248,7 @@ ul {
   align-items: center;
   width: fit-content;
   padding: 8px 12px;
-  border-radius: 999px;
+  border-radius: var(--radius-control);
   background: var(--accent-soft);
 }
 
@@ -860,14 +1262,14 @@ ul {
 
 .project-video {
   width: 100%;
-  border-radius: 16px;
+  border-radius: var(--radius-md);
   background: #0d1118;
 }
 
 .details-grid {
   display: grid;
   grid-template-columns: repeat(3, minmax(0, 1fr));
-  gap: 18px;
+  gap: var(--space-lg);
 }
 
 .detail-card {
@@ -877,7 +1279,7 @@ ul {
 .photo-grid {
   display: grid;
   grid-template-columns: repeat(2, minmax(0, 1fr));
-  gap: 18px;
+  gap: var(--space-lg);
 }
 
 .photo-grid-single {
@@ -892,32 +1294,62 @@ ul {
   background: rgba(255, 255, 255, 0.72);
 }
 
+.certificate-preview {
+  overflow: hidden;
+  border: 1px solid var(--line);
+  border-radius: var(--radius-md);
+  background: #fff;
+}
+
 .certificate-image {
+  display: block;
   width: 100%;
-  aspect-ratio: 4 / 3;
-  border-radius: 16px;
+  max-height: 520px;
   object-fit: contain;
   background: #fff;
 }
 
 .photo-caption {
-  margin-top: 12px;
+  margin-top: var(--space-sm);
   color: var(--text);
-  font-size: 0.96rem;
+  font-size: var(--text-sm);
   font-weight: var(--font-weight-bold);
-  line-height: 1.55;
+  line-height: var(--leading-caption);
   text-align: center;
 }
 
 .contact-card {
   display: grid;
-  gap: 10px;
+  gap: var(--space-sm);
   padding: 20px;
 }
 
 .contact-card strong {
-  font-size: 1rem;
-  line-height: 1.45;
+  font-size: var(--text-md);
+  line-height: var(--leading-caption);
+}
+
+.squircle-test-card {
+  --squircle-corner-radius: 28px;
+  --surface-filter-shadow: drop-shadow(0 24px 44px rgba(31, 36, 48, 0.1));
+  align-content: space-between;
+  justify-self: start;
+  width: min(100%, 420px);
+  max-width: 420px;
+  min-height: 240px;
+  padding: var(--space-lg);
+  border-radius: 40px;
+}
+
+.squircle-test-card strong {
+  font-size: var(--text-xl);
+  line-height: var(--leading-title);
+}
+
+.squircle-test-card span {
+  color: var(--muted);
+  font-size: var(--text-sm);
+  line-height: var(--leading-caption);
 }
 
 .reveal {
@@ -929,8 +1361,8 @@ ul {
   opacity: 0;
   transform: translateY(18px);
   transition:
-    opacity 640ms cubic-bezier(0.22, 1, 0.36, 1),
-    transform 640ms cubic-bezier(0.22, 1, 0.36, 1);
+    opacity var(--motion-reveal),
+    transform var(--motion-reveal);
 }
 
 .js .reveal.is-visible {
@@ -945,8 +1377,8 @@ ul {
   opacity: 0;
   transform: translateY(18px);
   transition:
-    opacity 520ms cubic-bezier(0.22, 1, 0.36, 1),
-    transform 520ms cubic-bezier(0.22, 1, 0.36, 1);
+    opacity var(--motion-reveal),
+    transform var(--motion-reveal);
 }
 .hero-section.is-visible .hero-title {
   transition-delay: 100ms;
@@ -981,13 +1413,18 @@ ul {
 }
 .spotlight-card {
   transition:
-    transform 260ms ease,
-    box-shadow 260ms ease;
+    transform var(--motion-standard),
+    box-shadow var(--motion-standard);
 }
 .spotlight-card:hover,
 .project-card:hover {
+  --surface-filter-shadow: var(--glass-hover-drop-shadow);
   transform: translateY(-4px) scale(1.01);
-  box-shadow: 0 26px 56px rgba(31, 36, 48, 0.16);
+}
+
+.spotlight-card:not(.squircle-surface):hover,
+.project-card:not(.squircle-surface):hover {
+  box-shadow: var(--glass-hover-shadow);
 }
 
 .button,
@@ -995,10 +1432,10 @@ ul {
 .gallery-control,
 .contact-card {
   transition:
-    transform 180ms ease,
-    box-shadow 180ms ease,
-    color 180ms ease,
-    background-color 180ms ease;
+    transform var(--motion-fast),
+    box-shadow var(--motion-fast),
+    color var(--motion-fast),
+    background-color var(--motion-fast);
 }
 .button:hover,
 .button:focus-visible {
@@ -1008,10 +1445,17 @@ ul {
 .text-link:focus-visible {
   color: var(--accent);
 }
+
+:where(a, button, select):focus-visible {
+  outline: 2px solid transparent;
+  outline-offset: 3px;
+  box-shadow: var(--focus-ring);
+}
+
 .media-frame {
   transition:
-    transform 320ms ease,
-    box-shadow 320ms ease;
+    transform var(--motion-panel),
+    box-shadow var(--motion-panel);
 }
 .media-frame:hover,
 .media-frame:focus-within {
@@ -1020,11 +1464,19 @@ ul {
 }
 
 @media (max-width: 1080px) {
+  :root {
+    --text-hero: 3.75rem;
+    --text-3xl: 2.5rem;
+    --text-2xl: 1.875rem;
+  }
+
   .hero-section,
   .project-hero,
   .project-grid,
   .work-grid,
+  .certificate-grid,
   .contact-grid,
+  .squircle-test-grid,
   .details-grid,
   .photo-grid {
     grid-template-columns: 1fr;
@@ -1045,16 +1497,19 @@ ul {
     max-height: 220px;
   }
 
-  .work-toggle-title {
-    font-size: 1.65rem;
-  }
-
   .project-hero h1 {
     max-width: none;
   }
 }
 
 @media (max-width: 820px) {
+  :root {
+    --text-hero: 3rem;
+    --text-3xl: 2.25rem;
+    --text-2xl: 1.75rem;
+    --text-xl: 1.375rem;
+  }
+
   .site-header {
     padding-top: 12px;
   }
@@ -1081,14 +1536,17 @@ ul {
   .language-switcher {
     justify-self: start;
   }
-
-  .hero-section h1,
-  .project-hero h1 {
-    font-size: clamp(2.1rem, 9vw, 3.2rem);
-  }
 }
 
 @media (max-width: 640px) {
+  :root {
+    --text-hero: 2.5rem;
+    --text-3xl: 2rem;
+    --text-2xl: 1.5rem;
+    --text-xl: 1.25rem;
+    --text-lg: 1.0625rem;
+  }
+
   .site-header-inner,
   .hero-section,
   .project-hero,
@@ -1139,6 +1597,7 @@ ul {
   .js .reveal,
   .button,
   .text-link,
+  .interactive-surface,
   .project-card,
   .spotlight-card,
   .work-card,

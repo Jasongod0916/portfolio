@@ -9,16 +9,10 @@
       name="description"
       content="AI Dementia Care System project page with demo video, technologies, and supporting materials."
     />
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&display=swap"
-      rel="stylesheet"
-    />
     <script>
       document.documentElement.classList.add("js");
     </script>
-    <link rel="stylesheet" href="styles.css?v=3" />
+    <link rel="stylesheet" href="styles.css?v=28" />
   </head>
   <body data-page="project1">
     <header class="site-header">
@@ -49,7 +43,7 @@
     </header>
 
     <main class="site-main project-main">
-      <section class="project-hero reveal">
+      <section class="project-hero project-hero--single reveal">
         <div class="project-hero-copy">
           <p class="section-kicker" data-i18n="project01Tag">專案 01</p>
           <h1 data-i18n="project1Title">AI失智照護系統</h1>
@@ -57,21 +51,13 @@
             >Android AI App</span
           >
           <p class="project-intro" data-i18n="project1Subtitle">
-            一套結合 AI、RAG 語義檢索、ChatGPT
-            與行為辨識技術的個人化失智陪伴系統，致力於解決高齡化社會下失智照護人力不足與陪伴缺口問題。系統透過「主動式陪伴」、「個人化互動」與「鼓勵式照顧」三大核心理念，陪伴患者進行日常聊天、飲食、運動與回憶互動，並透過
-            AI
-            分析使用者的聊天歷史、行為模式與生活習慣，提供更貼近個人的照護體驗。
+            針對<strong>失智照護人力不足</strong>與<strong>長者陪伴缺口</strong>，我負責從需求設計、AI
+            整合到 Android App 開發，打造一套具體可行的智慧陪伴系統。
+            系統整合 <strong>RAG 與 ChatGPT</strong>，提供懷舊聊天互動與照護知識檢索，並結合
+            <strong>ML Kit</strong> 進行運動偵測、<strong>YOLOv11</strong>
+            進行飲食辨識，以及 <strong>GPS</strong>
+            安全監測，讓家屬與照護者能即時掌握異常狀況，同時為長者提供更具個人化的互動與照護支援。
           </p>
-        </div>
-        <div class="project-aside">
-          <p class="project-aside-label" data-i18n="projectHighlightLabel">
-            Project Focus
-          </p>
-          <ul class="summary-list">
-            <li data-i18n="homeProject1Point1">即時監控與失智陪伴整合</li>
-            <li data-i18n="homeProject1Point2">RAG 與 ChatGPT 驅動互動體驗</li>
-            <li data-i18n="homeProject1Point3">全國 AI 創新競賽第一名</li>
-          </ul>
         </div>
       </section>
 
@@ -109,11 +95,9 @@
         <article class="detail-card">
           <p class="detail-card-title" data-i18n="technologyLabel">技術</p>
           <ul class="detail-list">
-            <li data-i18n="project1Tech1">YOLOv11（行為偵測）</li>
-            <li data-i18n="project1Tech2">Google ML Kit（姿態偵測）</li>
-            <li data-i18n="project1Tech3">
-              RAG（nostalgia content retrieval and response generation）
-            </li>
+            <li data-i18n="project1Tech1">YOLOv11(飲食偵測)</li>
+            <li data-i18n="project1Tech2">Google ML Kit（運動偵測）</li>
+            <li data-i18n="project1Tech3">RAG（懷舊聊天、照護知識）</li>
             <li data-i18n="project1Tech4">ChatGPT API（對話互動）</li>
             <li data-i18n="project1Tech5">Android（行動應用程式）</li>
             <li data-i18n="project1Tech6">MySQL（使用者與照護資料管理）</li>
@@ -125,10 +109,7 @@
           <ul class="detail-list">
             <li data-i18n="project1Achievement1">全國 AI 創新競賽第一名</li>
             <li data-i18n="project1Achievement2">
-              AI 驅動的個人化失智照護系統
-            </li>
-            <li data-i18n="project1Achievement3">
-              結合即時監控與對話式陪伴功能
+              2024 永續智慧創新黑客松競賽佳作
             </li>
           </ul>
         </article>
@@ -161,6 +142,7 @@
       </section>
     </main>
 
-    <script src="script.js?v=3"></script>
+    <script src="squircle.js?v=5"></script>
+    <script src="script.js?v=18"></script>
   </body>
 </html>

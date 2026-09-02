@@ -26,11 +26,10 @@ const translations = {
       homeHeroTitleLine1: "專案與作品，",
       homeHeroTitleLine2: "始終來自於生活。",
       homeHeroLead:
-        "這裡整理我做過的專題、課程作品與實作成果，聚焦在用 AI、產品設計與系統開發回應真實問題。",
+        "你好！我是邱世宇，也可以叫我 Jason。    這裡收藏著我做過的專題、課程作品與實作成果，聚焦於 AI、產品設計與系統開發，並嘗試用技術解決真實的問題。",
       homeHeroSupport:
         "首頁先看代表專案，再往下快速了解其他 projects、works 與聯絡方式。",
       homePrimaryCta: "查看代表專案",
-      homeSecondaryCta: "瀏覽所有專案",
       featuredLabel: "Featured Project",
       project01Tag: "專案 01",
       project02Tag: "專案 02",
@@ -59,11 +58,8 @@ const translations = {
       worksLead: "",
       certificatesEyebrow: "Certificates",
       certificatesTitle: "證書",
-      certificatesLead: "本區呈現與 AI、軟體開發與專案管理相關的專業證照。",
       certificateErpTitle: "ERP 規劃師認證",
       certificateAutocadTitle: "AutoCAD 專業認證",
-      certificatePdfDescription:
-        "內嵌 PDF 檢視，如果瀏覽器無法顯示，可下載檔案檢視。",
       certificatePdfFallbackBefore: "此瀏覽器無法直接預覽 PDF，請",
       download: "下載",
       certificatePdfFallbackAfter: "檢視。",
@@ -95,7 +91,7 @@ const translations = {
       siteLabel: "Website",
       livePortfolioLabel: "Live Portfolio",
       project1Subtitle:
-        "針對失智照護人力不足與長者陪伴缺口，我負責從需求設計、AI 整合到 Android App 開發，打造一套具體可行的智慧陪伴系統。系統結合懷舊聊天、RAG 知識檢索、ChatGPT 互動，以及 YOLOv11 / ML Kit 的運動、飲食與安全監測，讓家屬與照護者同時獲得即時警示與個人化互動支援。",
+        "針對失智照護人力不足與長者陪伴缺口，我負責從需求設計、AI 整合到 Android App 開發，打造一套具體可行的智慧陪伴系統。系統整合 RAG 與 ChatGPT，提供懷舊聊天互動與照護知識檢索，並結合 ML Kit 進行運動偵測、YOLOv11 進行飲食辨識，以及 GPS 安全監測，讓家屬與照護者能即時掌握異常狀況，同時為長者提供更具個人化的互動與照護支援。",
       project2Subtitle:
         "一套結合無人機巡檢、YOLO 視覺辨識與 Web 平台協作的農業媒合系統，聚焦於解決農業缺工、巡田效率不足與任務協調不易的問題。系統讓農民能透過平台建立任務、安排田區與工作流程，並結合 DJI Tello 與即時影像回傳進行農地觀測，提升農務媒合與現場巡檢的效率。",
       projectHighlightLabel: "Project Focus",
@@ -112,17 +108,14 @@ const translations = {
       project1Function4: "安全區防走失系統，立即發送離開警示",
       project1Function5: "每日量表互動，紀錄情緒與身體狀態",
       project1Function6: "衛教諮詢與照護建議，支援家屬決策",
-      project1Tech1: "YOLOv11（行為偵測）",
-      project1Tech2: "Google ML Kit（姿態偵測）",
-      project1Tech3:
-        "RAG（nostalgia content retrieval and response generation）",
+      project1Tech1: "YOLOv11(飲食偵測)",
+      project1Tech2: "Google ML Kit（運動偵測）",
+      project1Tech3: "RAG（懷舊聊天、照護知識）",
       project1Tech4: "ChatGPT API（對話互動）",
       project1Tech5: "Android（行動應用程式）",
       project1Tech6: "MySQL（使用者與照護資料管理）",
       project1Achievement1: "全國 AI 創新競賽第一名",
-      project1Achievement2: "從需求到實作完成即時監控與陪伴的失智照護 MVP",
-      project1Achievement3:
-        "整合 AI 影像辨識與對話陪伴，提升長者日常安全與互動",
+      project1Achievement2: "2024 永續智慧創新黑客松競賽佳作",
       project2Function1: "無人機輔助農地巡檢",
       project2Function2: "農業工作媒合平台",
       project2Function3: "任務排程與田區設定",
@@ -162,7 +155,6 @@ const translations = {
       homeHeroSupport:
         "Start with the representative project, then quickly review the rest of the projects, works, and contact details below.",
       homePrimaryCta: "View Featured Project",
-      homeSecondaryCta: "Browse All Projects",
       featuredLabel: "Featured Project",
       project01Tag: "Project 01",
       project02Tag: "Project 02",
@@ -195,12 +187,8 @@ const translations = {
       worksLead: "",
       certificatesEyebrow: "Certificates",
       certificatesTitle: "Certificates",
-      certificatesLead:
-        "This section highlights certificates related to AI, software development, and project management.",
       certificateErpTitle: "ERP Planning Certification",
       certificateAutocadTitle: "AutoCAD Professional Certification",
-      certificatePdfDescription:
-        "Embedded PDF preview. If your browser cannot display it, download the file to view.",
       certificatePdfFallbackBefore:
         "This browser cannot preview PDF directly, please",
       download: "Download",
@@ -257,18 +245,15 @@ const translations = {
         "Daily scale-based interaction assessment for mood and activity tracking",
       project1Function6:
         "Health education consultation and care suggestions for caregiver support",
-      project1Tech1: "YOLOv11 (behavior detection)",
-      project1Tech2: "Google ML Kit (pose detection)",
-      project1Tech3:
-        "RAG (nostalgia content retrieval and response generation)",
+      project1Tech1: "YOLOv11 (meal detection)",
+      project1Tech2: "Google ML Kit (activity detection)",
+      project1Tech3: "RAG (nostalgia chat and care knowledge)",
       project1Tech4: "ChatGPT API (conversational interaction)",
       project1Tech5: "Android (mobile application)",
       project1Tech6: "MySQL (user and care data management)",
       project1Achievement1: "1st Place - National AI Innovation Competition",
       project1Achievement2:
-        "Delivered a full dementia care MVP with monitoring and companionship",
-      project1Achievement3:
-        "Integrated AI vision and conversational support to improve daily safety and engagement",
+        "Merit Award, 2024 Sustainable Smart Innovation Hackathon",
       project2Function1: "Drone-assisted farmland inspection",
       project2Function2: "Agricultural job matching platform",
       project2Function3: "Task scheduling and field setup",
@@ -285,8 +270,46 @@ const translations = {
   },
 };
 
+const richTranslations = {
+  "zh-Hant": {
+    project1Subtitle: [
+      "針對",
+      { tag: "strong", text: "失智照護人力不足" },
+      "與",
+      { tag: "strong", text: "長者陪伴缺口" },
+      "，我負責從需求設計、AI 整合到 Android App 開發，打造一套具體可行的智慧陪伴系統。 系統整合 ",
+      { tag: "strong", text: "RAG 與 ChatGPT" },
+      "，提供懷舊聊天互動與照護知識檢索，並結合 ",
+      { tag: "strong", text: "ML Kit" },
+      " 進行運動偵測、",
+      { tag: "strong", text: "YOLOv11" },
+      " 進行飲食辨識，以及 ",
+      { tag: "strong", text: "GPS" },
+      " 安全監測，讓家屬與照護者能即時掌握異常狀況，同時為長者提供更具個人化的互動與照護支援。",
+    ],
+  },
+};
+
+function renderRichText(element, parts) {
+  const fragment = document.createDocumentFragment();
+
+  parts.forEach((part) => {
+    if (typeof part === "string") {
+      fragment.append(document.createTextNode(part));
+      return;
+    }
+
+    const node = document.createElement(part.tag === "strong" ? "strong" : "span");
+    node.textContent = part.text;
+    fragment.append(node);
+  });
+
+  element.replaceChildren(fragment);
+}
+
 function applyLanguage(language) {
   const locale = translations[language] || translations["zh-Hant"];
+  const richLocale = richTranslations[language] || {};
 
   document.documentElement.lang =
     language in translations ? language : "zh-Hant";
@@ -297,6 +320,11 @@ function applyLanguage(language) {
 
   document.querySelectorAll("[data-i18n]").forEach((element) => {
     const key = element.dataset.i18n;
+    if (richLocale[key]) {
+      renderRichText(element, richLocale[key]);
+      return;
+    }
+
     if (locale.text[key]) {
       element.textContent = locale.text[key];
     }

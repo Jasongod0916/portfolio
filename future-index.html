@@ -1,0 +1,480 @@
+<!doctype html>
+<html lang="zh-Hant">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta
+      name="description"
+      content="Jason Chiu 的個人作品與履歷網站，聚焦 AI 應用、產品設計與系統開發。"
+    />
+    <title>Jason Chiu | Portfolio</title>
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="assets/vendor/swiper/swiper-bundle.min.css"
+    />
+    <link rel="stylesheet" href="future-home.css?v=8" />
+  </head>
+  <body>
+    <header class="site-header">
+      <div class="site-header-inner">
+        <a class="site-brand" href="#home">Jason Portfolio</a>
+
+        <nav class="top-nav" aria-label="主要導覽">
+          <a href="#projects">Projects</a>
+          <a href="#works">Works</a>
+          <a href="#certificates">Certificates</a>
+          <a href="#contact">Contact</a>
+        </nav>
+      </div>
+    </header>
+
+    <main>
+      <section class="hero-section section-shell" id="home">
+        <div class="container-xxl px-3 px-md-4">
+          <div class="hero-card glass-shell overflow-hidden" data-glass>
+            <div class="hero-water" aria-hidden="true">
+              <canvas class="hero-water-canvas"></canvas>
+              <canvas class="hero-ripple-canvas"></canvas>
+            </div>
+            <div class="row g-0 align-items-stretch">
+              <div class="col-12">
+                <div
+                  class="hero-copy h-100 d-flex flex-column justify-content-center"
+                >
+                  <div>
+                    <h1 class="hero-title mb-4">
+                      <span class="hero-title-line hero-title-line-first"
+                        >把真實問題，</span
+                      >
+                      <span class="hero-title-line hero-title-line-second"
+                        >做成能被使用的產品。</span
+                      >
+                    </h1>
+                    <p class="hero-lead mb-0">
+                      <span
+                        class="hero-name"
+                        aria-label="我是邱世宇，你也可以叫我 Jason。"
+                      >
+                        <span
+                          class="hero-name-part hero-name-part-left"
+                          aria-hidden="true"
+                          >我是邱世宇，</span
+                        >
+                        <span
+                          class="hero-name-part hero-name-part-right"
+                          aria-hidden="true"
+                          >你也可以叫我 Jason。</span
+                        >
+                      </span>
+                      <span class="hero-description">
+                        <span class="hero-lead-line"
+                          >從使用情境出發，整合 AI、前端體驗與系統開發，</span
+                        >
+                        <span class="hero-lead-line"
+                          >讓技術不只可行，也真正好用。</span
+                        >
+                      </span>
+                    </p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="intro-section section-shell" id="about">
+        <div class="container-xxl px-3 px-md-4">
+          <div class="section-intro text-center mx-auto scroll-reveal">
+            <p class="eyebrow mb-3">ABOUT</p>
+            <h2 class="display-title mb-4">
+              重點不是功能有多少，<br />而是問題是否被解決。
+            </h2>
+            <p class="section-lead mb-0">
+              我的作品從照護、農務到開發工具，主題不同，但方法一致：先理解問題，再把複雜技術整理成清楚的使用流程。
+            </p>
+          </div>
+
+          <div class="row g-3 g-lg-4 mt-4 mt-lg-5">
+            <div class="col-md-4">
+              <article
+                class="metric-card squircle h-100 scroll-reveal"
+                style="--reveal-delay: 80ms"
+              >
+                <p class="metric-number mb-2">01</p>
+                <h3 class="metric-title mb-3">理解情境</h3>
+                <p class="metric-copy mb-0">
+                  從使用者、場域與限制條件中，找到真正值得處理的核心問題。
+                </p>
+              </article>
+            </div>
+            <div class="col-md-4">
+              <article
+                class="metric-card squircle h-100 scroll-reveal"
+                style="--reveal-delay: 200ms"
+              >
+                <p class="metric-number mb-2">02</p>
+                <h3 class="metric-title mb-3">整合技術</h3>
+                <p class="metric-copy mb-0">
+                  串接 AI
+                  模型、資料流程與介面，讓各項技術共同服務同一個目標。<span
+                    class="d-block mt-3"
+                    >AI APPLICATION · PRODUCT DESIGN · SYSTEM DEVELOPMENT</span
+                  >
+                </p>
+              </article>
+            </div>
+            <div class="col-md-4">
+              <article
+                class="metric-card squircle h-100 scroll-reveal"
+                style="--reveal-delay: 320ms"
+              >
+                <p class="metric-number mb-2">03</p>
+                <h3 class="metric-title mb-3">完成產品</h3>
+                <p class="metric-copy mb-0">
+                  把概念落實成可操作、可展示，也能被清楚說明的完整成果。
+                </p>
+              </article>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="project-section project-dark section-shell" id="projects">
+        <div class="container-xxl px-3 px-md-4">
+          <div class="project-card project-card-dark squircle overflow-hidden">
+            <div class="project-heading">
+              <div class="row justify-content-center align-items-end g-4">
+                <div class="col-lg-8 text-center">
+                  <p class="eyebrow eyebrow-warm mb-3">PROJECT 01</p>
+                  <h2 class="project-title mb-3">AI 失智照護系統</h2>
+                  <p class="project-subtitle mb-0">
+                    一套結合 AI、RAG 語義檢索、ChatGPT
+                    與運動辨識技術的個人化失智陪伴系統。
+                  </p>
+                </div>
+              </div>
+            </div>
+
+            <div class="project-story" data-scroll-story>
+              <div class="project-story-steps swiper">
+                <div class="swiper-wrapper">
+                  <article
+                    class="swiper-slide story-step is-active"
+                    data-story-step
+                    data-status="THE CHALLENGE"
+                    data-message="照護不能只在需要時才出現。"
+                  >
+                    <div class="story-copy">
+                      <h3>背景</h3>
+                      <p class="detail-text mb-0">
+                        高齡化社會下失智照護面臨人力不足與長者陪伴缺口，需要一套具體可行的解決方案。
+                      </p>
+                    </div>
+                    <div
+                      class="story-device care-device squircle"
+                      aria-hidden="true"
+                    >
+                      <span class="care-pulse"></span>
+                      <p class="care-status mb-2">THE CHALLENGE</p>
+                      <p class="care-message mb-0">
+                        照護不能只在需要時才出現。
+                      </p>
+                    </div>
+                  </article>
+                  <article
+                    class="swiper-slide story-step"
+                    data-story-step
+                    data-status="THE APPROACH"
+                    data-message="讓 AI 同時理解行為與對話。"
+                  >
+                    <div class="story-copy">
+                      <h3>我的做法</h3>
+                      <p class="detail-text mb-0">
+                        我負責從需求設計、AI 整合到 Android App
+                        開發，打造一套具體可行的智慧陪伴系統。系統結合懷舊聊天、RAG
+                        知識檢索、ChatGPT 互動，以及 YOLOv11 / ML Kit
+                        的運動、飲食與安全監測，讓家屬與照護者同時獲得即時警示與個人化互動支援。
+                      </p>
+                    </div>
+                    <div
+                      class="story-device care-device squircle"
+                      aria-hidden="true"
+                    >
+                      <span class="care-pulse"></span>
+                      <p class="care-status mb-2">THE APPROACH</p>
+                      <p class="care-message mb-0">
+                        讓 AI 同時理解行為與對話。
+                      </p>
+                    </div>
+                  </article>
+                  <article
+                    class="swiper-slide story-step"
+                    data-story-step
+                    data-status="THE OUTCOME"
+                    data-message="從概念走到被肯定的完整產品。"
+                  >
+                    <div class="story-copy">
+                      <h3>成果</h3>
+                      <p class="detail-text mb-0">
+                        以完整 AI 應用獲得 2024 全國 AI 創意實作競賽第一名。
+                      </p>
+                    </div>
+                    <div
+                      class="story-device care-device squircle"
+                      aria-hidden="true"
+                    >
+                      <span class="care-pulse"></span>
+                      <p class="care-status mb-2">THE OUTCOME</p>
+                      <p class="care-message mb-0">
+                        從概念走到被肯定的完整產品。
+                      </p>
+                    </div>
+                  </article>
+                </div>
+                <div
+                  class="story-pagination swiper-pagination"
+                  aria-label="Story pages"
+                ></div>
+              </div>
+
+              <div class="project-story-visual">
+                <div class="care-visual" aria-hidden="true">
+                  <div class="care-ring care-ring-one"></div>
+                  <div class="care-ring care-ring-two"></div>
+                  <div class="care-device squircle">
+                    <span class="care-pulse"></span>
+                    <p class="care-status mb-2">THE CHALLENGE</p>
+                    <p class="care-message mb-0">照護不能只在需要時才出現。</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="project-section section-shell">
+        <div class="container-xxl px-3 px-md-4">
+          <div class="project-card project-card-light squircle overflow-hidden">
+            <div class="project-heading">
+              <div class="row align-items-end g-4">
+                <div class="col-lg-8">
+                  <p class="eyebrow mb-3">PROJECT 02</p>
+                  <h2 class="project-title mb-3">AI 無人機農務媒合平台</h2>
+                  <p class="project-subtitle mb-0">
+                    讓巡田、任務協調與農務媒合成為一條更清楚的工作流程。
+                  </p>
+                </div>
+                <div class="col-lg-4 text-lg-end">
+                  <p class="project-platform mb-0">Drone · YOLO · Web</p>
+                </div>
+              </div>
+            </div>
+
+            <div class="agri-visual squircle" aria-hidden="true">
+              <div class="field-line field-line-one"></div>
+              <div class="field-line field-line-two"></div>
+              <div class="field-line field-line-three"></div>
+              <div class="drone-mark">
+                <span class="drone-arm drone-arm-one"></span>
+                <span class="drone-arm drone-arm-two"></span>
+                <span class="drone-body"></span>
+              </div>
+              <p class="agri-caption mb-0">從空中看見需求，讓平台完成協作。</p>
+            </div>
+
+            <div class="row g-3 g-lg-4 project-details">
+              <div class="col-lg-4">
+                <div class="detail-tile squircle h-100">
+                  <p class="detail-label mb-3">問題</p>
+                  <p class="detail-text mb-0">
+                    農務缺工、巡田效率與任務協調，需要更直接的資訊整合方式。
+                  </p>
+                </div>
+              </div>
+              <div class="col-lg-4">
+                <div class="detail-tile squircle h-100">
+                  <p class="detail-label mb-3">我的做法</p>
+                  <p class="detail-text mb-0">
+                    結合 DJI Tello、YOLO 視覺辨識、即時影像與 Web 任務媒合平台。
+                  </p>
+                </div>
+              </div>
+              <div class="col-lg-4">
+                <div class="detail-tile squircle h-100">
+                  <p class="detail-label mb-3">成果</p>
+                  <p class="detail-text mb-0">
+                    獲得 2023 InnoServe 大專校院資訊應用服務創新競賽第一名。
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="works-section section-shell" id="works">
+        <div class="container-xxl px-3 px-md-4">
+          <div class="section-intro mx-auto text-center">
+            <p class="eyebrow mb-3">SELECTED WORKS</p>
+            <h2 class="display-title mb-4">專題之外，我持續把想法做成工具。</h2>
+            <p class="section-lead mb-0">
+              這些作品呈現我如何處理資訊架構、前端互動與實際交付。
+            </p>
+          </div>
+
+          <div class="row g-3 g-lg-4 mt-4 mt-lg-5">
+            <div class="col-lg-7">
+              <article class="work-card work-card-teal squircle h-100">
+                <div>
+                  <p class="eyebrow eyebrow-light mb-3">WEB PRODUCT</p>
+                  <h3 class="work-title mb-3">Gitub Analysis for You</h3>
+                  <p class="work-copy mb-0">
+                    協助使用者搜尋、篩選與分析 GitHub
+                    專案，提供卡片、列表與深色模式切換。我負責整體介面設計、前端互動與專案探索流程。
+                  </p>
+                </div>
+                <div class="browser-mock squircle" aria-hidden="true">
+                  <div class="browser-bar">
+                    <span></span><span></span><span></span>
+                  </div>
+                  <div class="browser-content">
+                    <div class="mock-sidebar"></div>
+                    <div class="mock-grid"><i></i><i></i><i></i><i></i></div>
+                  </div>
+                </div>
+              </article>
+            </div>
+            <div class="col-lg-5">
+              <article class="work-card work-card-coral squircle h-100">
+                <div>
+                  <p class="eyebrow eyebrow-light mb-3">DESKTOP TOOL</p>
+                  <h3 class="work-title mb-3">萬用轉檔王</h3>
+                  <p class="work-copy mb-0">
+                    把多種轉檔需求整理成一個可攜式桌面工具。我負責工具整合、轉檔流程設計與軟體封裝。
+                  </p>
+                </div>
+                <div class="converter-mark squircle" aria-hidden="true">
+                  <span>PDF</span>
+                  <i>→</i>
+                  <span>DOCX</span>
+                </div>
+              </article>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="skills-section section-shell">
+        <div class="container-xxl px-3 px-md-4">
+          <div class="skills-card squircle">
+            <div class="row g-5 align-items-start">
+              <div class="col-lg-5">
+                <p class="eyebrow mb-3">CAPABILITIES</p>
+                <h2 class="display-title mb-4">
+                  從模型到介面，<br />把作品完整接起來。
+                </h2>
+                <p class="section-lead mb-0">
+                  我習慣跨越不同工具與技術，將它們整理成一致的產品體驗。
+                </p>
+              </div>
+              <div class="col-lg-7">
+                <div class="skill-row">
+                  <p class="skill-index mb-0">01</p>
+                  <div>
+                    <h3>AI 與電腦視覺</h3>
+                    <p>YOLO、ML Kit、RAG、ChatGPT API</p>
+                  </div>
+                </div>
+                <div class="skill-row">
+                  <p class="skill-index mb-0">02</p>
+                  <div>
+                    <h3>應用與平台開發</h3>
+                    <p>Android、HTML、CSS、JavaScript、Python</p>
+                  </div>
+                </div>
+                <div class="skill-row">
+                  <p class="skill-index mb-0">03</p>
+                  <div>
+                    <h3>資料與系統整合</h3>
+                    <p>MySQL、API 串接、產品流程設計</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="recognition-section section-shell" id="certificates">
+        <div class="container-xxl px-3 px-md-4">
+          <div class="section-intro mx-auto text-center">
+            <p class="eyebrow mb-3">RECOGNITION</p>
+            <h2 class="display-title mb-4">讓成果接受真實評選。</h2>
+          </div>
+
+          <div class="recognition-list mt-4 mt-lg-5">
+            <article class="award-row squircle">
+              <p class="award-year mb-0">2024</p>
+              <div>
+                <h3>全國 AI 創意實作競賽</h3>
+                <p class="mb-0">第一名</p>
+              </div>
+              <p class="award-project mb-0">AI 失智照護系統</p>
+            </article>
+            <article class="award-row squircle">
+              <p class="award-year mb-0">2024</p>
+              <div>
+                <h3>永續智慧創新黑客松競賽</h3>
+                <p class="mb-0">佳作</p>
+              </div>
+              <p class="award-project mb-0">AI 應用實作</p>
+            </article>
+            <article class="award-row squircle">
+              <p class="award-year mb-0">2023</p>
+              <div>
+                <h3>大專校院資訊應用服務創新競賽</h3>
+                <p class="mb-0">第一名</p>
+              </div>
+              <p class="award-project mb-0">AI 無人機農務媒合平台</p>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <section class="closing-section section-shell" id="contact">
+        <div class="container-xxl px-3 px-md-4">
+          <div class="closing-card squircle text-center">
+            <p class="eyebrow eyebrow-light mb-4">
+              LET'S BUILD SOMETHING USEFUL
+            </p>
+            <h2 class="closing-title mb-4">
+              下一個問題，<br />我準備好一起解決。
+            </h2>
+            <p class="closing-copy mb-4">
+              期待參與需要理解問題、整合技術並完成產品的團隊。
+            </p>
+            <p class="contact-line mb-0">jasonchiu0916@gmail.com</p>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <footer class="site-footer">
+      <div
+        class="container-xxl d-flex flex-column flex-md-row justify-content-between gap-2 px-4 px-lg-5 py-4"
+      >
+        <p class="mb-0">Jason Chiu · Portfolio</p>
+        <p class="mb-0">Designed as one continuous story.</p>
+      </div>
+    </footer>
+    <script src="assets/vendor/swiper/swiper-bundle.min.js"></script>
+    <script src="future-scroll.js?v=8"></script>
+    <script src="assets/three-water-test/water-flow-test.js?v=22"></script>
+  </body>
+</html>
