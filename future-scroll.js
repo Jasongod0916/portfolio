@@ -461,42 +461,6 @@ document.querySelectorAll("[data-scroll-story]").forEach((story) => {
     }, 180);
   };
 
-  // Story wheel control disabled
-  // const handleStoryWheel = (event) => {
-  //   const delta = event.deltaY || event.wheelDelta || 0;
-  //   updateFocusState();
-  //
-  //   if (!canSwitchStep()) {
-  //     return;
-  //   }
-  //
-  //   if (Math.abs(delta) < 40 || performance.now() < wheelLockedUntil) {
-  //     return;
-  //   }
-  //
-  //   const direction = Math.sign(delta);
-  //   const candidateIndex = activeIndex + direction;
-  //
-  //   if (candidateIndex < 0) {
-  //     if (activeIndex === 0) {
-  //       return;
-  //     }
-  //     return;
-  //   }
-  //
-  //   if (candidateIndex >= steps.length) {
-  //     if (activeIndex === steps.length - 1) {
-  //       return;
-  //     }
-  //     return;
-  //   }
-  //
-  //   event.preventDefault();
-  //   wheelLockedUntil = performance.now() + 1100;
-  //   activateStep(candidateIndex);
-  // };
-
-  // window.addEventListener("wheel", handleStoryWheel, { passive: false });
   window.addEventListener("scroll", updateFocusState, { passive: true });
   window.addEventListener("resize", updateFocusState, { passive: true });
 
