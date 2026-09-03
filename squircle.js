@@ -16,8 +16,6 @@
     ".media-frame",
     ".certificate-preview",
     ".work-gallery .gallery-track",
-    ".gallery-control",
-    ".gallery-dots button",
   ];
 
   const DIRECT_MASK_SELECTORS = [".work-card-image", ".project-video"];

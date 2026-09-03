@@ -30,7 +30,9 @@
   --radius-sm: 16px; /* Small UI elements */
   --radius-control: 16px; /* Form controls */
   --radius-compact: 10px; /* Compact elements */
-  --radius-cta: 999px; /* Pill-shaped buttons */
+  --shape-capsule: 999px; /* Capsule controls and pill buttons */
+  --shape-circle: 50%; /* Circular icon controls */
+  --radius-cta: var(--shape-capsule); /* Legacy alias for pill-shaped buttons */
   --squircle-smoothness: 0.6; /* Squircle curve parameter (0-1 range) */
   /* Layout */
   --container: 1180px; /* Max content width */
@@ -59,6 +61,29 @@
   --glass-hover-shadow: 0 26px 56px rgba(31, 36, 48, 0.16);
   --glass-hover-drop-shadow: drop-shadow(0 26px 56px rgba(31, 36, 48, 0.16));
   --glass-blur: blur(26px) saturate(1.45); /* Backdrop filter settings */
+
+  /* Component Tokens - shared UI contracts */
+  --component-gap-compact: 12px;
+  --component-pad-meta: 14px 16px;
+  --component-pad-role: 14px;
+  --control-height-md: 46px;
+  --control-pad-x-md: 18px;
+  --control-icon-size: 44px;
+  --gallery-controls-inset: 10px;
+  --gallery-controls-gap: 10px;
+  --gallery-controls-padding: 6px;
+  --gallery-dot-size: 8px;
+  --gallery-dot-active-size: 10px;
+  --gallery-dot-gap: 8px;
+  --gallery-dot-track-width: 28px;
+  --accent-rule-width: 3px;
+  --accent-rule-color: rgba(184, 92, 44, 0.22);
+  --glass-control-fill: rgba(255, 255, 255, 0.92);
+  --glass-control-border: rgba(255, 255, 255, 0.78);
+  --glass-control-shadow:
+    inset 0 1px 0 rgba(255, 255, 255, 0.9),
+    0 8px 20px rgba(31, 36, 48, 0.08);
+
   /* Spacing Scale - 8px base */
   --space-2xs: 0.375rem;
   --space-xs: 0.5rem;
@@ -300,7 +325,6 @@ ul {
   .work-card-image,
   .work-gallery .gallery-track,
   .squircle-test-card,
-  .gallery-dots button,
   .meta-list div {
     corner-shape: squircle;
   }
@@ -427,8 +451,8 @@ ul {
   display: inline-flex;
   align-items: center;
   justify-content: center;
-  min-height: 46px;
-  padding: 0 18px;
+  min-height: var(--control-height-md);
+  padding: 0 var(--control-pad-x-md);
   border-radius: var(--radius-control);
   font-size: var(--text-sm);
   font-weight: var(--font-weight-bold);
@@ -465,7 +489,7 @@ ul {
   color: #fff8f3;
   background: linear-gradient(135deg, #d0794f 0%, #b85c2c 100%);
   border: 1px solid transparent;
-  border-radius: var(--radius-cta);
+  border-radius: var(--shape-capsule);
   box-shadow: 0 16px 30px rgba(184, 92, 44, 0.16);
 }
 
@@ -478,8 +502,12 @@ ul {
 .button-secondary,
 .text-link {
   color: var(--text);
-  border: 1px solid var(--line);
-  background: rgba(255, 255, 255, 0.82);
+  border: 1px solid var(--glass-border-soft);
+  border-radius: var(--shape-capsule);
+  background: var(--glass-sheen), var(--glass-bg);
+  box-shadow: var(--shadow-soft);
+  backdrop-filter: var(--glass-blur);
+  -webkit-backdrop-filter: var(--glass-blur);
 }
 
 .spotlight-card {
@@ -575,7 +603,7 @@ ul {
   top: 0.72em;
   width: 7px;
   height: 7px;
-  border-radius: 50%;
+  border-radius: var(--shape-circle);
   background: var(--accent);
   transform: translateY(-50%);
 }
@@ -851,22 +879,10 @@ ul {
 }
 
 .meta-list div.squircle-surface {
-  --squircle-fill: rgba(255, 255, 255, 0.72);
-  --squircle-stroke: rgba(31, 36, 48, 0.08);
-}
-
-.gallery-control.squircle-surface {
-  --squircle-fill: rgba(255, 255, 255, 0.95);
-  --squircle-stroke: transparent;
-}
-
-.gallery-dots button.squircle-surface {
-  --squircle-fill: rgba(255, 255, 255, 0.8);
-  --squircle-stroke: transparent;
-}
-
-.gallery-dots button.squircle-surface.is-active {
-  --squircle-fill: var(--accent);
+  --squircle-fill: var(--glass-bg);
+  --squircle-stroke: var(--glass-border-soft);
+  --squircle-filter-shadow: var(--shadow-drop);
+  --squircle-inner-shadow: var(--glass-inner-shadow);
 }
 
 .work-grid {
@@ -952,6 +968,7 @@ ul {
 }
 
 .work-title-header {
+  grid-column: 1 / -1;
   display: grid;
   gap: var(--space-xs);
   padding: var(--space-lg);
@@ -968,7 +985,7 @@ ul {
 
 .work-title-header .work-toggle-title {
   color: var(--text);
-  font-size: var(--text-2xl);
+  font-size: var(--text-3xl);
   font-weight: var(--font-weight-bold);
   line-height: var(--leading-title);
   letter-spacing: 0;
@@ -1073,7 +1090,7 @@ ul {
 
 .work-gallery {
   position: relative;
-  padding-bottom: 62px;
+  padding-bottom: 64px;
 }
 
 .work-gallery .gallery-track {
@@ -1105,12 +1122,35 @@ ul {
 .gallery-bottom-controls {
   position: absolute;
   left: 50%;
-  bottom: 16px;
+  bottom: var(--gallery-controls-inset);
   transform: translateX(-50%);
-  display: flex;
+  display: inline-grid;
+  grid-template-columns: var(--control-icon-size) var(--gallery-dot-track-width) var(--control-icon-size);
   align-items: center;
-  gap: var(--space-sm);
+  gap: var(--gallery-controls-gap);
+  padding: var(--gallery-controls-padding);
+  border: 1px solid var(--glass-border-soft);
+  border-radius: var(--shape-capsule);
+  background: var(--glass-bg);
+  box-shadow: var(--shadow-soft);
+  backdrop-filter: var(--glass-blur);
+  -webkit-backdrop-filter: var(--glass-blur);
+  overflow: hidden;
   z-index: 2;
+}
+
+.gallery-bottom-controls::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+  background: var(--glass-sheen);
+  opacity: 0.62;
+}
+
+.gallery-bottom-controls > * {
+  position: relative;
+  z-index: 1;
 }
 
 .gallery-control {
@@ -1120,24 +1160,40 @@ ul {
   right: auto;
   bottom: auto;
   transform: none;
-  width: 38px;
-  height: 38px;
-  border: none;
-  border-radius: var(--radius-sm);
-  background: rgba(255, 255, 255, 0.95);
-  backdrop-filter: blur(12px);
-  box-shadow: 0 10px 24px rgba(31, 36, 48, 0.18);
+  width: var(--control-icon-size);
+  height: var(--control-icon-size);
+  padding: 0;
+  border: 1px solid var(--glass-control-border);
+  border-radius: var(--shape-circle);
+  background: var(--glass-control-fill);
+  appearance: none;
+  backdrop-filter: none;
+  box-shadow: var(--glass-control-shadow);
   color: var(--accent);
   font-size: var(--text-lg);
+  font-weight: var(--font-weight-bold);
   cursor: pointer;
   display: grid;
   place-items: center;
+  transition:
+    border-color var(--motion-fast),
+    box-shadow var(--motion-fast),
+    color var(--motion-fast),
+    background-color var(--motion-fast);
+}
+
+.gallery-control-icon {
+  position: relative;
+  z-index: 2;
+  display: block;
+  line-height: 1;
+  transform: translateY(-1px);
 }
 
 .gallery-control:hover,
 .gallery-control:focus-visible {
-  transform: scale(1.08);
-  background: rgba(255, 255, 255, 1);
+  color: var(--text);
+  background: #fff;
 }
 
 .gallery-prev,
@@ -1151,27 +1207,35 @@ ul {
   bottom: auto;
   transform: none;
   display: flex;
-  gap: 8px;
+  align-items: center;
+  justify-content: center;
+  gap: var(--gallery-dot-gap);
+  min-width: var(--gallery-dot-track-width);
 }
 
 .gallery-dots button {
-  width: 10px;
-  height: 10px;
-  border-radius: var(--radius-compact);
+  width: var(--gallery-dot-size);
+  height: var(--gallery-dot-size);
+  padding: 0;
+  border-radius: var(--shape-capsule);
   border: none;
-  background: rgba(255, 255, 255, 0.8);
+  background: rgba(31, 36, 48, 0.12);
+  appearance: none;
   cursor: pointer;
   transition:
-    transform var(--motion-fast),
+    width var(--motion-fast),
+    height var(--motion-fast),
     background-color var(--motion-fast);
 }
 
 .gallery-dots button:hover,
 .gallery-dots button:focus-visible {
-  transform: scale(1.15);
+  background: rgba(184, 92, 44, 0.45);
 }
 
 .gallery-dots button.is-active {
+  width: var(--gallery-dot-active-size);
+  height: var(--gallery-dot-active-size);
   background: var(--accent);
 }
 
@@ -1181,13 +1245,13 @@ ul {
 
 .work-card-body {
   display: grid;
-  gap: 12px;
+  gap: var(--component-gap-compact);
   min-width: 0;
 }
 
 .work-role {
-  padding-left: 14px;
-  border-left: 3px solid rgba(184, 92, 44, 0.22);
+  padding-left: var(--component-pad-role);
+  border-left: var(--accent-rule-width) solid var(--accent-rule-color);
   color: var(--text);
   font-size: var(--text-sm);
   font-weight: var(--font-weight-semibold);
@@ -1203,7 +1267,7 @@ ul {
 .meta-list div {
   display: grid;
   gap: var(--space-2xs);
-  padding: 14px 16px;
+  padding: var(--component-pad-meta);
   border: 1px solid rgba(31, 36, 48, 0.08);
   border-radius: var(--radius-md);
   background: rgba(255, 255, 255, 0.72);
@@ -1213,8 +1277,8 @@ ul {
 .meta-list div.glass-surface {
   border: none;
   background: transparent; /* Let glass-surface handle background */
-  padding: 14px 16px; /* Keep padding */
-  border-radius: 0; /* Let squircle-surface handle border-radius */
+  padding: var(--component-pad-meta); /* Keep padding */
+  border-radius: var(--radius-md); /* Radius drives the squircle mask */
 }
 
 .meta-list dd {
@@ -1429,7 +1493,6 @@ ul {
 
 .button,
 .text-link,
-.gallery-control,
 .contact-card {
   transition:
     transform var(--motion-fast),
