@@ -396,6 +396,11 @@ ul {
   font-weight: var(--font-weight-black);
 }
 
+.hero-section .hero-title {
+  font-size: var(--text-3xl);
+  line-height: 1.4;
+}
+
 .hero-title-line {
   display: block;
 }
@@ -523,6 +528,122 @@ ul {
       rgba(248, 243, 236, 0.96)
     ),
     var(--surface);
+}
+
+.spotlight-card:has(.spotlight-visual) {
+  padding: 10px;
+  gap: 0;
+  overflow: hidden;
+}
+
+.spotlight-visual {
+  display: grid;
+  justify-items: center;
+  gap: 18px;
+  padding: 20px 16px;
+  border-radius: 22px;
+  background: radial-gradient(ellipse at 50% 75%, #c6e5df, transparent 65%), #edf3ee;
+}
+
+.spotlight-award {
+  padding: 7px 12px;
+  border: 1px solid rgba(184, 92, 44, 0.18);
+  border-radius: 999px;
+  background: #fff8ed;
+  color: #925025;
+  font-size: 12px;
+  font-weight: 700;
+  text-align: center;
+}
+
+.spotlight-screens {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 14px;
+  width: 100%;
+  min-width: 0;
+}
+
+.spotlight-app,
+.spotlight-app.squircle-mask-direct {
+  border-radius: var(--radius-sm);
+  display: block;
+  width: auto;
+  height: 260px;
+  max-width: calc((100% - 14px) / 2);
+  object-fit: contain;
+  filter: drop-shadow(0 12px 14px rgba(27, 58, 52, 0.18));
+}
+
+.spotlight-copy {
+  display: grid;
+  gap: 10px;
+  padding: 20px 14px 14px;
+}
+
+.spotlight-cta {
+  justify-self: start;
+  margin-top: 6px;
+}
+
+.spotlight-link {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  color: var(--accent);
+  font-size: var(--text-sm);
+  font-weight: 700;
+  margin-top: 4px;
+}
+
+.project-card.project-image-card {
+  padding: 12px;
+  gap: 0;
+  grid-template-rows: auto 1fr;
+}
+
+.project-cover,
+.project-cover.squircle-mask-direct {
+  border-radius: var(--radius-sm);
+  aspect-ratio: 16 / 9;
+  overflow: hidden;
+  background: #f3f0e7;
+  min-width: 0;
+}
+
+.project-cover-apps {
+  display: grid;
+  place-items: center;
+  background: radial-gradient(ellipse at 50% 80%, #c6e5df, transparent 70%), #edf3ee;
+}
+
+.project-cover-apps .spotlight-screens {
+  height: 100%;
+  padding: 14px;
+}
+
+.project-cover-apps .spotlight-app {
+  height: auto;
+  width: 22%;
+}
+
+.project-cover-image {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+}
+
+.project-image-copy {
+  display: grid;
+  gap: 12px;
+  padding: 22px 14px 14px;
+  grid-template-rows: auto auto 1fr auto;
+}
+
+.project-image-copy h3 {
+  max-width: none;
 }
 
 .spotlight-topline {
@@ -733,6 +854,18 @@ ul {
   /* Backdrop blur creates the frosted glass effect by blurring content behind */
   backdrop-filter: var(--glass-blur);
   -webkit-backdrop-filter: var(--glass-blur); /* Safari support */
+}
+
+.glass-surface.glass-capsule {
+  border-radius: var(--shape-capsule);
+  corner-shape: round;
+  overflow: hidden;
+  box-shadow: var(--glass-shadow), var(--glass-inner-shadow);
+}
+
+.glass-surface.glass-capsule::before {
+  border-radius: inherit;
+  corner-shape: round;
 }
 
 /* Shine overlay layer - creates surface light reflection */

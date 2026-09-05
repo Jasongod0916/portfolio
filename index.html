@@ -12,7 +12,7 @@
     <script>
       document.documentElement.classList.add("js");
     </script>
-    <link rel="stylesheet" href="styles.css?v=37" />
+    <link rel="stylesheet" href="styles.css?v=45" />
   </head>
   <body data-page="home">
     <header class="site-header">
@@ -48,38 +48,32 @@
         <div class="hero-copy">
           <h1 class="hero-title">
             <span class="hero-title-line" data-i18n="homeHeroTitleLine1"
-              >專案與作品，</span
+              >你好，我是邱世宇</span
             >
             <span class="hero-title-line" data-i18n="homeHeroTitleLine2"
-              >始終來自於生活。</span
+              >讓想法點石成金</span
             >
           </h1>
           <p class="hero-lead" data-i18n="homeHeroLead">
-            你好！我是邱世宇，也可以叫我 Jason。
-            這裡收藏著我做過的專題、課程作品與實作成果，聚焦於
-            AI、產品設計與系統開發，並嘗試用技術解決真實的問題。
+            這裡收藏著我做過的專題、課程作品與實作成果，專注於 AI 應用、產品設計與系統開發，從真實需求出發，將想法轉化為實際可用的工具與服務。
           </p>
-          <div class="hero-actions">
-            <a
-              class="button button-primary"
-              href="project_1.html"
-              data-i18n="homePrimaryCta"
-              >查看代表專案</a
-            >
-          </div>
         </div>
 
         <a class="spotlight-card glass-surface reveal" href="project_1.html">
+          <div class="spotlight-visual">
+            <span class="spotlight-award" data-i18n="spotlightAward">全國 AI 創意實作競賽 第一名</span>
+            <div class="spotlight-screens">
+              <img class="spotlight-app" src="assets/works/cognicare-app.png" width="313" height="638" alt="智友 App 首頁：失智檢測、懷舊、運動與飲食檢測" />
+              <img class="spotlight-app" src="assets/works/cognicare-services.png" width="318" height="641" alt="智友 App 服務畫面：衛教聊天、安全區設置與聯絡簿" />
+            </div>
+          </div>
+          <div class="spotlight-copy">
           <h2 data-i18n="project1Title">AI失智照護系統</h2>
-          <p class="spotlight-meta" data-i18n="project1Meta">Android AI App</p>
           <p class="spotlight-description" data-i18n="project1Summary">
-            結合即時監控與個人化陪伴的失智照護 AI 系統。
+            專注於個人化陪伴的失智照護 AI 系統。
           </p>
-          <ul class="spotlight-points">
-            <li data-i18n="homeProject1Point1">即時監控與失智陪伴整合</li>
-            <li data-i18n="homeProject1Point2">RAG 與 ChatGPT 驅動互動體驗</li>
-            <li data-i18n="homeProject1Point3">全國 AI 創新競賽第一名</li>
-          </ul>
+          <span class="button button-primary spotlight-cta" data-i18n="homePrimaryCta">查看代表專案</span>
+          </div>
         </a>
       </section>
 
@@ -93,24 +87,30 @@
         </div>
 
         <div class="project-grid">
-          <a class="project-card glass-surface reveal" href="project_1.html">
-            <span class="card-tag" data-i18n="project01Tag">專案 01</span>
-            <h3 data-i18n="project1Title">AI失智照護系統</h3>
-            <p class="card-meta" data-i18n="project1Meta">Android AI App</p>
-            <p class="card-description" data-i18n="project1Summary">
-              結合即時監控與個人化陪伴的失智照護 AI 系統。
-            </p>
+          <a class="project-card project-image-card glass-surface reveal" href="project_1.html">
+            <div class="project-cover project-cover-apps">
+              <div class="spotlight-screens">
+                <img class="spotlight-app" src="assets/works/cognicare-app.png" width="313" height="638" alt="智友 App 首頁" loading="lazy" />
+                <img class="spotlight-app" src="assets/works/cognicare-services.png" width="318" height="641" alt="智友 App 衛教聊天與安全區服務" loading="lazy" />
+              </div>
+            </div>
+            <div class="project-image-copy">
+              <span class="card-tag" data-i18n="project01Tag">專案 01</span>
+              <h3 data-i18n="project1Title">AI失智照護系統</h3>
+              <p class="card-description" data-i18n="project1Summary">專注於個人化陪伴的失智照護 AI 系統。</p>
+              <span class="spotlight-link"><span data-i18n="spotlightCta">查看專案</span><span aria-hidden="true">↗</span></span>
+            </div>
           </a>
-
-          <a class="project-card glass-surface reveal" href="project_2.html">
-            <span class="card-tag" data-i18n="project02Tag">專案 02</span>
-            <h3 data-i18n="project2Title">AI 無人機農務媒合平台</h3>
-            <p class="card-meta" data-i18n="project2Meta">
-              Drone + Agri Platform
-            </p>
-            <p class="card-description" data-i18n="project2Summary">
-              結合無人機巡檢、農務媒合與任務協調的農業平台。
-            </p>
+          <a class="project-card project-image-card glass-surface reveal" href="project_2.html">
+            <div class="project-cover">
+              <img class="project-cover-image" src="assets/works/wings-of-green-silver.png" width="1920" height="1080" alt="青銀之翼 Wings of Green Silver：無人機與農業主題專案封面" loading="lazy" />
+            </div>
+            <div class="project-image-copy">
+              <span class="card-tag" data-i18n="project02Tag">專案 02</span>
+              <h3 data-i18n="project2Title">AI 無人機農務媒合平台</h3>
+              <p class="card-description" data-i18n="project2Summary">結合無人機巡檢、農務媒合與任務協調的農業平台。</p>
+              <span class="spotlight-link"><span data-i18n="spotlightCta">查看專案</span><span aria-hidden="true">↗</span></span>
+            </div>
           </a>
         </div>
       </section>
@@ -198,7 +198,7 @@
                   </dl>
                   <div class="inline-actions">
                     <a
-                      class="text-link glass-surface "
+                      class="text-link glass-surface glass-capsule"
                       href="https://gitub-analysis-for-you.onrender.com/"
                       target="_blank"
                       rel="noreferrer"
@@ -206,7 +206,7 @@
                       >Live Site</a
                     >
                     <a
-                      class="text-link"
+                      class="text-link glass-surface glass-capsule"
                       href="https://github.com/Jasongod0916/Gitub_Analysis_for_You"
                       target="_blank"
                       rel="noreferrer"
@@ -297,14 +297,14 @@
                   </dl>
                   <div class="inline-actions">
                     <a
-                      class="text-link"
+                      class="text-link glass-surface glass-capsule"
                       href="https://github.com/Jasongod0916/WanyongConverter"
                       target="_blank"
                       rel="noreferrer"
                       >GitHub</a
                     >
                     <a
-                      class="text-link"
+                      class="text-link glass-surface glass-capsule"
                       href="https://github.com/Jasongod0916/WanyongConverter/releases"
                       target="_blank"
                       rel="noreferrer"
@@ -378,20 +378,20 @@
           </a>
           <a
             class="contact-card glass-surface"
-            href="https://github.com/Jasongod0916/portfolio"
+            href="https://github.com/Jasongod0916"
             target="_blank"
             rel="noreferrer"
           >
             <span class="contact-label">GitHub</span>
             <strong data-i18n="githubPortfolioLabel"
-              >Portfolio Repository</strong
+              >Jasongod0916</strong
             >
           </a>
         </div>
       </section>
     </main>
 
-    <script src="squircle.js?v=6"></script>
-    <script src="script.js?v=18"></script>
+    <script src="squircle.js?v=8"></script>
+    <script src="script.js?v=25"></script>
   </body>
 </html>

@@ -23,14 +23,16 @@ const translations = {
       navCertificates: "Certificates",
       navContact: "Contact",
       homeKicker: "Portfolio",
-      homeHeroTitleLine1: "專案與作品，",
-      homeHeroTitleLine2: "始終來自於生活。",
+      homeHeroTitleLine1: "你好，我是邱世宇",
+      homeHeroTitleLine2: "讓想法點石成金",
       homeHeroLead:
-        "你好！我是邱世宇，也可以叫我 Jason。    這裡收藏著我做過的專題、課程作品與實作成果，聚焦於 AI、產品設計與系統開發，並嘗試用技術解決真實的問題。",
+        "這裡收藏著我做過的專題、課程作品與實作成果，專注於 AI 應用、產品設計與系統開發，從真實需求出發，將想法轉化為實際可用的工具與服務。",
       homeHeroSupport:
         "首頁先看代表專案，再往下快速了解其他 projects、works 與聯絡方式。",
       homePrimaryCta: "查看代表專案",
       featuredLabel: "Featured Project",
+      spotlightAward: "全國 AI 創意實作競賽 第一名",
+      spotlightCta: "查看專案",
       project01Tag: "專案 01",
       project02Tag: "專案 02",
       project1Title: "AI失智照護系統",
@@ -87,7 +89,7 @@ const translations = {
       contactLead:
         "如果你想進一步了解專案細節、履歷背景或合作可能，歡迎直接聯絡我。",
       emailLabel: "Email",
-      githubPortfolioLabel: "Portfolio Repository",
+      githubPortfolioLabel: "Jasongod0916",
       siteLabel: "Website",
       livePortfolioLabel: "Live Portfolio",
       project1Subtitle:
@@ -148,14 +150,16 @@ const translations = {
       navCertificates: "Certificates",
       navContact: "Contact",
       homeKicker: "Portfolio",
-      homeHeroTitleLine1: "Projects and works,",
-      homeHeroTitleLine2: "shaped by real problems.",
+      homeHeroTitleLine1: "Hi! I'm Jason Chiu",
+      homeHeroTitleLine2: "Turning ideas into gold",
       homeHeroLead:
-        "This portfolio brings together my major projects, course work, and product-oriented implementations, with a focus on using AI, system design, and product thinking to respond to real-world needs.",
+        "This portfolio brings together my major projects, coursework, and hands-on work, focusing on AI applications, product design, and systems development. Starting with real-world needs, I turn ideas into practical tools and services.",
       homeHeroSupport:
         "Start with the representative project, then quickly review the rest of the projects, works, and contact details below.",
       homePrimaryCta: "View Featured Project",
       featuredLabel: "Featured Project",
+      spotlightAward: "1st Place · National AI Competition",
+      spotlightCta: "View project",
       project01Tag: "Project 01",
       project02Tag: "Project 02",
       project1Title: "AI Dementia Care System",
@@ -219,7 +223,7 @@ const translations = {
       contactLead:
         "If you would like to learn more about the projects, my background, or collaboration opportunities, feel free to contact me directly.",
       emailLabel: "Email",
-      githubPortfolioLabel: "Portfolio Repository",
+      githubPortfolioLabel: "Jasongod0916",
       siteLabel: "Website",
       livePortfolioLabel: "Live Portfolio",
       project1Subtitle:

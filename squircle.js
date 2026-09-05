@@ -18,7 +18,7 @@
     ".work-gallery .gallery-track",
   ];
 
-  const DIRECT_MASK_SELECTORS = [".work-card-image", ".project-video"];
+  const DIRECT_MASK_SELECTORS = [".work-card-image", ".project-video", ".spotlight-app", ".project-cover"];
   const EXCLUDED_SELECTORS = [".button-primary"];
   const fillMaskCache = new Map();
   const strokeMaskCache = new Map();
