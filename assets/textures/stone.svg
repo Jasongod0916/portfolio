@@ -1,0 +1,11 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="160" height="160" viewBox="0 0 160 160">
+  <filter id="rock" x="0" y="0" width="100%" height="100%">
+    <feTurbulence type="fractalNoise" baseFrequency=".09" numOctaves="4" seed="12" result="noise"/>
+    <feDiffuseLighting in="noise" surfaceScale="5" diffuseConstant="1" lighting-color="#a6acb0">
+      <feDistantLight azimuth="225" elevation="48"/>
+    </feDiffuseLighting>
+  </filter>
+  <path fill="#777f85" d="M0 0h160v160H0z"/>
+  <path filter="url(#rock)" d="M0 0h160v160H0z"/>
+  <path d="m22 0 19 36-8 17 26 32-7 29 19 46M41 36l32-11 18 6M59 85l30 6 21 26" fill="none" stroke="#343e45" stroke-opacity=".4" stroke-width="1.1"/>
+</svg>

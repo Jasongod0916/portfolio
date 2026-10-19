@@ -8,6 +8,7 @@
     ".work-toggle",
     ".work-card",
     ".certificate-card",
+    ".award-card",
     ".contact-card",
     ".squircle-test-card",
     ".project-pill",

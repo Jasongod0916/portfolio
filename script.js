@@ -17,7 +17,7 @@ const translations = {
         "AI無人機農務媒合平台專案頁，包含展示影片、技術重點與競賽資料。",
     },
     text: {
-      navHome: "首頁",
+      navHome: "Home",
       navProjects: "Projects",
       navWorks: "Works",
       navCertificates: "Certificates",
@@ -30,6 +30,7 @@ const translations = {
       homeHeroSupport:
         "首頁先看代表專案，再往下快速了解其他 projects、works 與聯絡方式。",
       homePrimaryCta: "查看代表專案",
+      homeGithubCta: "GitHub 個人主頁",
       featuredLabel: "Featured Project",
       spotlightAward: "全國 AI 創意實作競賽 第一名",
       spotlightCta: "查看專案",
@@ -54,12 +55,18 @@ const translations = {
       projectsLead:
         "兩個專案都以真實情境為出發點，從需求、功能到成果都可以快速看到核心價值。",
       worksEyebrow: "Works",
-      worksTitle: "課程作品 與 日常開發",
+      worksTitle: "課程作品 與 AI 協作開發",
       worksSectionTitle: "課程作品",
-      worksSubsectionTitle: "日常開發",
+      worksSubsectionTitle: "AI 協作開發",
       worksLead: "",
       certificatesEyebrow: "Certificates",
       certificatesTitle: "證書",
+      awardsTitle: "競賽獲獎",
+      awardFirst: "第一名",
+      awardMerit: "佳作",
+      awardAiTitle: "全國 AI 創意實作競賽",
+      awardInnoserveTitle: "InnoServe 無人機應用組",
+      awardHackathonTitle: "永續智慧創新黑客松競賽",
       certificateErpTitle: "ERP 規劃師認證",
       certificateAutocadTitle: "AutoCAD 專業認證",
       certificatePdfFallbackBefore: "此瀏覽器無法直接預覽 PDF，請",
@@ -68,6 +75,16 @@ const translations = {
       work1Tag: "Windows Utility",
       work2Tag: "Website",
       work1Title: "萬用轉檔王",
+      work3Tag: "3D Printing Tool",
+      work3Title: "STL Splitter：3D 模型裁切與定位孔工具",
+      work3Description: "讓超出列印尺寸的 3D 模型也能分件製作。在瀏覽器中載入 STL、調整切割位置並配置定位孔，將零件與定位銷一次匯出為 ZIP，方便後續列印與組裝。",
+      work3Type: "3D 列印輔助工具",
+      work3Efficiency: "以模型切成兩件、配置 2 個定位孔並匯出為例，預估操作時間可由手動建模的約 15 分鐘縮短至 5 分鐘，節省約 67%。",
+      work4Tag: "3D Printing Tool",
+      work4Title: "3D 條碼載具卡產生器",
+      work4Description: "將條碼文字轉成可 3D 列印的實體載具卡。支援 Code 39 與 Code 128，可調整卡片尺寸、底板厚度及條碼凸起高度，匯出 STL、分件 3MF 與 SVG，方便單色或多色列印。",
+      work4Type: "3D 列印輔助工具",
+      work4Community: "已發布至 MakerWorld 3D 列印社群，讓使用者從線上產生條碼卡，到下載模型並實際列印。",
       work2Title: "SEO 實作：GitHub 專案分析平台",
       work1Description:
         "一套可攜式 Windows 轉檔工具，整合圖片、文件與媒體格式轉換，支援批次處理與免安裝使用情境。",
@@ -157,6 +174,7 @@ const translations = {
       homeHeroSupport:
         "Start with the representative project, then quickly review the rest of the projects, works, and contact details below.",
       homePrimaryCta: "View Featured Project",
+      homeGithubCta: "GitHub Profile",
       featuredLabel: "Featured Project",
       spotlightAward: "1st Place · National AI Competition",
       spotlightCta: "View project",
@@ -185,12 +203,18 @@ const translations = {
       projectsLead:
         "Both projects start from real scenarios, making it easy to understand the problem, solution, and outcome at a glance.",
       worksEyebrow: "Works",
-      worksTitle: "Course Work and Daily Development",
+      worksTitle: "Course Work and AI-Assisted Development",
       worksSectionTitle: "Course Work",
-      worksSubsectionTitle: "Daily Development",
+      worksSubsectionTitle: "AI-Assisted Development",
       worksLead: "",
       certificatesEyebrow: "Certificates",
       certificatesTitle: "Certificates",
+      awardsTitle: "Competition Awards",
+      awardFirst: "First Place",
+      awardMerit: "Honorable Mention",
+      awardAiTitle: "National AI Creative Implementation Competition",
+      awardInnoserveTitle: "InnoServe Competition — Drone Applications",
+      awardHackathonTitle: "Sustainability and Smart Innovation Hackathon",
       certificateErpTitle: "ERP Planning Certification",
       certificateAutocadTitle: "AutoCAD Professional Certification",
       certificatePdfFallbackBefore:
@@ -202,6 +226,16 @@ const translations = {
       work1Description:
         "A portable Windows file conversion tool that combines image, document, and media conversion in one interface, with support for batch workflows and portable use.",
       work1Title: "Wanyong Converter",
+      work3Tag: "3D Printing Tool",
+      work3Title: "STL Splitter: Model Cutting and Alignment Pins",
+      work3Description: "Prepare oversized 3D models for printing in separate parts. Load an STL in the browser, adjust the cut position, and place alignment holes, then export the parts and pins together as a ZIP for printing and assembly.",
+      work3Type: "3D Printing Utility",
+      work3Efficiency: "For splitting a model into two parts, adding two alignment holes, and exporting, estimated operation time drops from about 15 minutes of manual modeling to 5 minutes, saving approximately 67%.",
+      work4Tag: "3D Printing Tool",
+      work4Title: "3D Barcode Carrier Card Generator",
+      work4Description: "Turn barcode text into a 3D-printable carrier card. Supports Code 39 and Code 128 with adjustable card dimensions, base thickness, and raised barcode height. Export STL, multi-part 3MF, and SVG files for single-color or multicolor printing.",
+      work4Type: "3D Printing Utility",
+      work4Community: "Published on the MakerWorld 3D printing community, helping users go from generating a barcode card online to downloading the model and printing it.",
       work2Title: "SEO Case Study: GitHub Project Analysis Platform",
       work1Role:
         "I handled tool integration, conversion flow design, and packaging the portable desktop build.",
@@ -276,6 +310,12 @@ const translations = {
 
 const richTranslations = {
   "zh-Hant": {
+    homeHeroTitleLine2: [
+      "讓想法點",
+      { text: "石", className: "hero-material hero-material-stone" },
+      "成",
+      { text: "金", className: "hero-material hero-material-gold" },
+    ],
     project1Subtitle: [
       "針對",
       { tag: "strong", text: "失智照護人力不足" },
@@ -305,6 +345,7 @@ function renderRichText(element, parts) {
 
     const node = document.createElement(part.tag === "strong" ? "strong" : "span");
     node.textContent = part.text;
+    if (part.className) node.className = part.className;
     fragment.append(node);
   });
 
@@ -443,6 +484,8 @@ function initGalleries() {
     const nextButton = gallery.querySelector(".gallery-next");
 
     if (slides.length <= 1) {
+      const controls = gallery.querySelector(".gallery-bottom-controls");
+      if (controls) controls.style.display = "none";
       if (prevButton) prevButton.style.display = "none";
       if (nextButton) nextButton.style.display = "none";
       return;
@@ -453,6 +496,7 @@ function initGalleries() {
     const updateGallery = (index) => {
       slides.forEach((slide, slideIndex) => {
         slide.classList.toggle("is-active", slideIndex === index);
+        if (slide.matches("img")) slide.tabIndex = slideIndex === index ? 0 : -1;
       });
       if (dotsContainer) {
         Array.from(dotsContainer.children).forEach((dot, dotIndex) => {
@@ -514,3 +558,46 @@ function initAutoPlayVideos() {
 
 initGalleries();
 initAutoPlayVideos();
+
+function initImagePreview() {
+  const dialog = document.querySelector(".image-preview");
+  if (!dialog) return;
+  const image = dialog.querySelector(".image-preview-image");
+  const title = dialog.querySelector(".image-preview-title");
+  let trigger;
+
+  document.querySelectorAll("[data-image-preview]").forEach((link) => {
+    const isImage = link.matches("img");
+    if (isImage) {
+      link.setAttribute("role", "button");
+      link.setAttribute("aria-haspopup", "dialog");
+      link.tabIndex = link.matches(".work-slide:not(.is-active)") ? -1 : 0;
+      link.addEventListener("keydown", (event) => {
+        if (event.key === "Enter" || event.key === " ") {
+          event.preventDefault();
+          link.click();
+        }
+      });
+    }
+    link.addEventListener("click", (event) => {
+      event.preventDefault();
+      trigger = link;
+      const source = isImage ? link : link.querySelector("img");
+      image.src = isImage ? source.currentSrc || source.src : link.href;
+      image.alt = source.alt;
+      title.textContent = source.alt;
+      dialog.showModal();
+      document.documentElement.classList.add("image-preview-open");
+    });
+  });
+  dialog.addEventListener("click", (event) => {
+    if (event.target === dialog) dialog.close();
+  });
+  dialog.addEventListener("close", () => {
+    document.documentElement.classList.remove("image-preview-open");
+    image.removeAttribute("src");
+    trigger?.focus({ preventScroll: true });
+  });
+}
+
+initImagePreview();

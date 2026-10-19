@@ -12,7 +12,7 @@
     <script>
       document.documentElement.classList.add("js");
     </script>
-    <link rel="stylesheet" href="styles.css?v=45" />
+    <link rel="stylesheet" href="styles.css?v=52" />
   </head>
   <body data-page="home">
     <header class="site-header">
@@ -20,7 +20,7 @@
         <a class="site-brand" href="index.html">Jason Portfolio</a>
 
         <nav class="top-nav" aria-label="Primary">
-          <a href="#home" data-i18n="navHome">首頁</a>
+          <a href="#home" data-i18n="navHome">Home</a>
           <a href="#projects" data-i18n="navProjects">Projects</a>
           <a href="#works" data-i18n="navWorks">Works</a>
           <a href="#certificates" data-i18n="navCertificates">Certificates</a>
@@ -51,12 +51,19 @@
               >你好，我是邱世宇</span
             >
             <span class="hero-title-line" data-i18n="homeHeroTitleLine2"
-              >讓想法點石成金</span
+              >讓想法點<span class="hero-material hero-material-stone">石</span>成<span class="hero-material hero-material-gold">金</span></span
             >
           </h1>
           <p class="hero-lead" data-i18n="homeHeroLead">
             這裡收藏著我做過的專題、課程作品與實作成果，專注於 AI 應用、產品設計與系統開發，從真實需求出發，將想法轉化為實際可用的工具與服務。
           </p>
+          <div class="hero-actions">
+            <a class="text-link glass-surface glass-capsule hero-github-link"
+              href="https://github.com/Jasongod0916" target="_blank" rel="noreferrer">
+              <img src="assets/icons/github.svg" width="20" height="20" alt="" aria-hidden="true" />
+              <span data-i18n="homeGithubCta">GitHub 個人主頁</span>
+            </a>
+          </div>
         </div>
 
         <a class="spotlight-card glass-surface reveal" href="project_1.html">
@@ -139,13 +146,13 @@
                 >
                   <div class="gallery-track">
                     <img
-                      class="work-card-image work-slide is-active"
+                      class="work-card-image work-slide is-active" data-image-preview
                       src="assets/works/work2/1.png"
                       alt="GitHub SEO 專案分析平台 截圖 1"
                       loading="lazy"
                     />
                     <img
-                      class="work-card-image work-slide"
+                      class="work-card-image work-slide" data-image-preview
                       src="assets/works/work2/2.png"
                       alt="GitHub SEO 專案分析平台 截圖 2"
                       loading="lazy"
@@ -220,11 +227,84 @@
         </div>
         <div class="section-heading">
           <p></p>
-          <h2 data-i18n="worksSubsectionTitle">日常開發</h2>
+          <h2 data-i18n="worksSubsectionTitle">AI 協作開發</h2>
         </div>
         <div class="work-group">
           <div class="work-grid">
-            <article class="work-accordion reveal" id="work-wanyongconverter">
+            <article class="work-accordion reveal" id="work-stl-split-and-pin">
+              <div class="work-card glass-surface squircle-surface">
+                <div class="work-title-header">
+                  <span class="work-toggle-tag" data-i18n="work3Tag">3D Printing Tool</span>
+                  <h2 class="work-toggle-title" data-i18n="work3Title">STL Splitter：3D 模型裁切與定位孔工具</h2>
+                </div>
+                <div class="work-card-media">
+                  <img class="work-card-image" data-image-preview src="assets/works/stl-split-and-pin/preview.png"
+                    alt="STL Splitter showing a loaded model, cut face, and 3D views" loading="lazy" />
+                </div>
+                <div class="work-card-body">
+                  <span class="card-tag" data-i18n="work3Tag">3D Printing Tool</span>
+                  <h3 data-i18n="work3Title">STL Splitter：3D 模型裁切與定位孔工具</h3>
+                  <p class="card-description" data-i18n="work3Description">讓超出列印尺寸的 3D 模型也能分件製作。在瀏覽器中載入 STL、調整切割位置並配置定位孔，將零件與定位銷一次匯出為 ZIP，方便後續列印與組裝。</p>
+                  <p class="work-role" data-i18n="work3Efficiency">以模型切成兩件、配置 2 個定位孔並匯出為例，預估操作時間可由手動建模的約 15 分鐘縮短至 5 分鐘，節省約 67%。</p>
+                  <dl class="meta-list">
+                    <div class="glass-surface squircle-surface">
+                      <dt data-i18n="typeLabel">類型</dt>
+                      <dd data-i18n="work3Type">3D 列印輔助工具</dd>
+                    </div>
+                    <div class="glass-surface squircle-surface">
+                      <dt data-i18n="platformLabel">平台</dt>
+                      <dd>Web</dd>
+                    </div>
+                    <div class="meta-list-wide glass-surface squircle-surface">
+                      <dt data-i18n="techLabel">技術</dt>
+                      <dd>JavaScript, Three.js, Manifold WASM</dd>
+                    </div>
+                  </dl>
+                  <div class="inline-actions">
+                    <a class="text-link glass-surface glass-capsule" href="https://jasongod0916.github.io/stl-split-and-pin/" target="_blank" rel="noreferrer" data-i18n="liveSite">Live Site</a>
+                    <a class="text-link glass-surface glass-capsule" href="https://github.com/Jasongod0916/stl-split-and-pin" target="_blank" rel="noreferrer">GitHub</a>
+                  </div>
+                </div>
+              </div>
+            </article>
+            <article class="work-accordion reveal" id="work-barcode-3d-carrier-converter">
+              <div class="work-card glass-surface squircle-surface">
+                <div class="work-title-header">
+                  <span class="work-toggle-tag" data-i18n="work4Tag">3D Printing Tool</span>
+                  <h2 class="work-toggle-title" data-i18n="work4Title">3D 條碼載具卡產生器</h2>
+                </div>
+                <div class="work-card-media">
+                  <img class="work-card-image" data-image-preview src="assets/works/barcode-3d-carrier-converter/preview.png"
+                    alt="3D printable carrier card with raised barcode and carrier number" loading="lazy" />
+                </div>
+                <div class="work-card-body">
+                  <span class="card-tag" data-i18n="work4Tag">3D Printing Tool</span>
+                  <h3 data-i18n="work4Title">3D 條碼載具卡產生器</h3>
+                  <p class="card-description" data-i18n="work4Description">將條碼文字轉成可 3D 列印的實體載具卡。支援 Code 39 與 Code 128，可調整卡片尺寸、底板厚度及條碼凸起高度，匯出 STL、分件 3MF 與 SVG，方便單色或多色列印。</p>
+                  <p class="work-role" data-i18n="work4Community">已發布至 MakerWorld 3D 列印社群，讓使用者從線上產生條碼卡，到下載模型並實際列印。</p>
+                  <dl class="meta-list">
+                    <div class="glass-surface squircle-surface">
+                      <dt data-i18n="typeLabel">類型</dt>
+                      <dd data-i18n="work4Type">3D 列印輔助工具</dd>
+                    </div>
+                    <div class="glass-surface squircle-surface">
+                      <dt data-i18n="platformLabel">平台</dt>
+                      <dd>Web</dd>
+                    </div>
+                    <div class="meta-list-wide glass-surface squircle-surface">
+                      <dt data-i18n="techLabel">技術</dt>
+                      <dd>HTML, JavaScript, SVG</dd>
+                    </div>
+                  </dl>
+                  <div class="inline-actions">
+                    <a class="text-link glass-surface glass-capsule" href="https://jasongod0916.github.io/barcode-3d-carrier-converter/" target="_blank" rel="noreferrer" data-i18n="liveSite">Live Site</a>
+                    <a class="text-link glass-surface glass-capsule" href="https://github.com/Jasongod0916/barcode-3d-carrier-converter" target="_blank" rel="noreferrer">GitHub</a>
+                    <a class="text-link glass-surface glass-capsule" href="https://makerworld.com/zh/models/3058397-customizable-3d-barcode-card-generator-support-for#profileId-3441298" target="_blank" rel="noreferrer">MakerWorld</a>
+                  </div>
+                </div>
+              </div>
+            </article>
+            <article class="work-accordion reveal" id="work-wanyongconverter" hidden>
               <div class="work-card glass-surface squircle-surface">
                 <div class="work-title-header">
                   <span class="work-toggle-tag" data-i18n="work1Tag"
@@ -240,13 +320,13 @@
                 >
                   <div class="gallery-track">
                     <img
-                      class="work-card-image work-slide is-active"
+                      class="work-card-image work-slide is-active" data-image-preview
                       src="assets/works/work1/work1.png"
                       alt="WanyongConverter application screenshot"
                       loading="lazy"
                     />
                     <!-- 如果之後要新增幻燈片圖片，直接在這裡新增一個 .work-slide 元素：
-                  <img class="work-card-image work-slide" src="assets/works/work1/2.png" alt="WanyongConverter screenshot 2" loading="lazy">
+                  <img class="work-card-image work-slide" data-image-preview src="assets/works/work1/2.png" alt="WanyongConverter screenshot 2" loading="lazy">
                   --></div>
                   <div class="gallery-bottom-controls">
                     <button
@@ -319,6 +399,39 @@
         </div>
       </section>
 
+      <section class="section-block reveal" id="awards">
+        <div class="section-heading">
+          <p class="section-kicker">Awards</p>
+          <h2 data-i18n="awardsTitle">競賽獲獎</h2>
+        </div>
+        <div class="awards-grid">
+          <article class="award-card glass-surface reveal">
+            <a class="award-preview" data-image-preview href="assets/awards/1_全國AI創意實作競賽.JPG" aria-haspopup="dialog">
+              <img src="assets/awards/1_全國AI創意實作競賽.JPG" alt="2024 National AI competition award certificate" loading="lazy" />
+            </a>
+            <p class="card-tag">2024 · <span data-i18n="awardFirst">第一名</span></p>
+            <h3 data-i18n="awardAiTitle">全國 AI 創意實作競賽</h3>
+            <a class="text-link glass-surface glass-capsule" href="project_1.html" data-i18n="spotlightCta">查看專案</a>
+          </article>
+          <article class="award-card glass-surface reveal">
+            <a class="award-preview" data-image-preview href="assets/awards/2_Innoserve.jpg" aria-haspopup="dialog">
+              <img src="assets/awards/2_Innoserve.jpg" alt="2023 InnoServe competition award" loading="lazy" />
+            </a>
+            <p class="card-tag">2023 · <span data-i18n="awardFirst">第一名</span></p>
+            <h3 data-i18n="awardInnoserveTitle">InnoServe 無人機應用組</h3>
+            <a class="text-link glass-surface glass-capsule" href="project_2.html" data-i18n="spotlightCta">查看專案</a>
+          </article>
+          <article class="award-card glass-surface reveal">
+            <a class="award-preview" data-image-preview href="assets/awards/1_黑客松.JPG" aria-haspopup="dialog">
+              <img src="assets/awards/1_黑客松.JPG" alt="2024 sustainability and smart innovation hackathon award certificate" loading="lazy" />
+            </a>
+            <p class="card-tag">2024 · <span data-i18n="awardMerit">佳作</span></p>
+            <h3 data-i18n="awardHackathonTitle">永續智慧創新黑客松競賽</h3>
+            <a class="text-link glass-surface glass-capsule" href="project_1.html" data-i18n="spotlightCta">查看專案</a>
+          </article>
+        </div>
+      </section>
+
       <section class="section-block reveal" id="certificates">
         <div class="section-heading">
           <p class="section-kicker" data-i18n="certificatesEyebrow">
@@ -336,7 +449,7 @@
             </h3>
             <div class="certificate-preview">
               <img
-                class="certificate-image"
+                class="certificate-image" data-image-preview
                 src="assets/certificates/2024_ERP規劃師認證.png"
                 alt="ERP 規劃師認證證照"
                 loading="lazy"
@@ -352,7 +465,7 @@
             </h3>
             <div class="certificate-preview">
               <img
-                class="certificate-image"
+                class="certificate-image" data-image-preview
                 src="assets/certificates/2020_Autodesk_AutoCAD專業認證.png"
                 alt="AutoCAD 專業認證證照"
                 loading="lazy"
@@ -391,7 +504,14 @@
       </section>
     </main>
 
-    <script src="squircle.js?v=8"></script>
-    <script src="script.js?v=25"></script>
+    <dialog class="image-preview" aria-labelledby="image-preview-title">
+      <h2 id="image-preview-title" class="image-preview-title">圖片預覽</h2>
+      <form method="dialog">
+        <button class="image-preview-close" type="submit" aria-label="Close" title="Close">&times;</button>
+      </form>
+      <img class="image-preview-image" alt="" />
+    </dialog>
+    <script src="squircle.js?v=9"></script>
+    <script src="script.js?v=31"></script>
   </body>
 </html>
