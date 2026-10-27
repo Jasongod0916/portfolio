@@ -12,7 +12,7 @@
     <script>
       document.documentElement.classList.add("js");
     </script>
-    <link rel="stylesheet" href="styles.css?v=59" />
+    <link rel="stylesheet" href="styles.css?v=60" />
   </head>
   <body data-page="home">
     <header class="site-header">
@@ -20,7 +20,6 @@
         <a class="site-brand" href="index.html">Jason Portfolio</a>
 
         <nav class="top-nav" aria-label="Primary">
-          <a href="#home" data-i18n="navHome">Home</a>
           <a href="#projects" data-i18n="navProjects">Projects</a>
           <a href="#works" data-i18n="navWorks">Works</a>
           <a href="#awards" data-i18n="navAwards">Awards</a>
@@ -226,6 +225,30 @@
                       rel="noreferrer"
                       >GitHub</a
                     >
+                  </div>
+                </div>
+              </div>
+            </article>
+            <article class="work-accordion reveal" id="work-embedded-linux-robotics">
+              <div class="work-card glass-surface squircle-surface">
+                <div class="work-title-header">
+                  <span class="work-toggle-tag">Embedded Linux &amp; Robotics</span>
+                  <h2 class="work-toggle-title" data-i18n="work5Title">嵌入式 Linux 與機器人實作</h2>
+                </div>
+                <div class="work-card-media">
+                  <img class="work-card-image robotics-image" data-image-preview src="assets/works/embedded-linux-robotics/robot-dog.jpg" alt="機器狗實體組裝：機構、伺服馬達與電路板配置" loading="lazy" />
+                </div>
+                <div class="work-card-body">
+                  <span class="card-tag">Embedded Linux &amp; Robotics</span>
+                  <p class="card-description" data-i18n="work5Description">從 ARM 交叉編譯、Linux 系統建置與裝置驅動，到 Raspberry Pi 電腦視覺實驗，收錄 Lab1–12 的程式與實驗紀錄，並延伸至機器狗實體組裝與系統設計。</p>
+                  <p class="work-role" data-i18n="work5Role">我獨立完成機器狗實體組裝，並規劃接線、元件需求及後續軟體整合；影像辨識與步態控制目前為系統設計規劃。</p>
+                  <dl class="meta-list">
+                    <div class="glass-surface squircle-surface"><dt data-i18n="typeLabel">類型</dt><dd data-i18n="work5Type">課程實驗與期末專題</dd></div>
+                    <div class="glass-surface squircle-surface"><dt data-i18n="platformLabel">平台</dt><dd>Linux / Raspberry Pi</dd></div>
+                    <div class="meta-list-wide glass-surface squircle-surface"><dt data-i18n="techLabel">技術</dt><dd>C, Python, Buildroot, GPIO, OpenCV</dd></div>
+                  </dl>
+                  <div class="inline-actions">
+                    <a class="text-link glass-surface glass-capsule" href="https://github.com/Jasongod0916/embedded-linux-robotics-portfolio" target="_blank" rel="noopener noreferrer">GitHub</a>
                   </div>
                 </div>
               </div>
@@ -519,6 +542,6 @@
       <img class="image-preview-image" alt="" />
     </dialog>
     <script src="squircle.js?v=9"></script>
-    <script src="script.js?v=33"></script>
+    <script src="script.js?v=34"></script>
   </body>
 </html>

@@ -1410,6 +1410,11 @@ html.image-preview-open {
   background: #fff;
 }
 
+.work-card-image.robotics-image {
+  object-fit: contain;
+  object-position: center;
+}
+
 .work-gallery {
   position: relative;
   padding-bottom: calc(var(--control-icon-size) + 2 * var(--gallery-controls-padding) + 2px + var(--gallery-controls-inset) + 24px);
